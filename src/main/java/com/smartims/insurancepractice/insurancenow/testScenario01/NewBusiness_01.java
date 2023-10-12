@@ -3,6 +3,7 @@ package com.smartims.insurancepractice.insurancenow.testScenario01;
 import com.smartims.insurancepractice.insurancenow.commonClasses.ConstantsClass;
 import com.smartims.insurancepractice.insurancenow.voClasses.NewBusinessVO;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.IOException;
@@ -69,9 +70,9 @@ public class NewBusiness_01 {
         nbvo.setNewBusinessNonDriver1Gender(ExcelUtils_01.getCellValueByLabel("newBusinessNonDriver1Gender"));
         nbvo.setNewBusinessNonDriver1BirthDate(ExcelUtils_01.getCellValueByLabel("newBusinessNonDriver1BirthDate"));
         nbvo.setNewBusinessNonDriver1MaritalStatus(ExcelUtils_01.getCellValueByLabel("newBusinessNonDriver1MaritalStatus"));
-
-
-
+        nbvo.setNewBusinessNonDriver1NonRatedReason(ExcelUtils_01.getCellValueByLabel("newBusinessNonDriver1NonRatedReason"));
+        nbvo.setNewBusinessAICode(ExcelUtils_01.getCellValueByLabel("newBusinessAICode"));
+        nbvo.setNewBusinessAIInterestType(ExcelUtils_01.getCellValueByLabel("newBusinessAIInterestType"));
 
 
         //New Business Creation
@@ -86,7 +87,7 @@ public class NewBusiness_01 {
         driver.findElement(By.id(ConstantsClass.newBusinessProducerCode)).sendKeys(nbvo.getNewBusinessProducerCode());
         driver.findElement(By.id(ConstantsClass.newBusinessProducerLookup)).click();
         driver.findElement(By.name(ConstantsClass.basicPolicyNolapse)).sendKeys(nbvo.getNewBusinessDoesTheInsuredHavePriorInsuranceCoverageWithNoLapseOrALapseOfLessThan30Days());
-       // driver.findElement(By.name(ConstantsClass.basicPolicyUninsuredMorethanThirtyDays)).sendKeys(nbvo.getNewBusinessHastheinsuredoperatedanuninsuredmotorvehicleformorethan30daysinthepast12months());
+        // driver.findElement(By.name(ConstantsClass.basicPolicyUninsuredMorethanThirtyDays)).sendKeys(nbvo.getNewBusinessHastheinsuredoperatedanuninsuredmotorvehicleformorethan30daysinthepast12months());
 //      Insured information
         driver.findElement(By.name(ConstantsClass.newBusinessEntityType)).sendKeys(nbvo.getNewBusinessEntityType());
         driver.findElement(By.name(ConstantsClass.newBusinessInsuredFirstName)).sendKeys(nbvo.getNewBusinessIndividualFirst());
@@ -106,14 +107,6 @@ public class NewBusiness_01 {
         driver.findElement(By.id(ConstantsClass.nextPageBottom)).click();
 //      Selecting the new customer
         driver.findElement(By.name("QuoteCustomerClearingRef")).click();
-//      Automobile Policy General Screen
-//       driver.findElement(By.name(ConstantsClass.newBusinessBodilyInjuryLimit)).sendKeys(nbvo.getNewBusinessBodilyInjuryPerPersonPerAccident());
-//        driver.findElement(By.name(ConstantsClass.newBusinessPropertyDamageLimit)).sendKeys(nbvo.getNewBusinessPropertyDamage());
-//        driver.findElement(By.name(ConstantsClass.newBusinessMedicalPaymentLimit)).sendKeys(nbvo.getNewBusinessMedicalPayments());
-//       driver.findElement(By.name(ConstantsClass.newBusinessPersonalInjuryProtectionLimit)).sendKeys(nbvo.getNewBusinessPersonalInjuryProtection());
-//        driver.findElement(By.name(ConstantsClass.newBusinessUninsured_UnderInsuredMotoristBodilyInjury)).sendKeys(nbvo.getNewBusinessUninsuredUnderinsuredMotoristBodilyInjury());
-//        driver.findElement(By.name(ConstantsClass.newBusinessUninsured_UnderInsuredMotoristPropertyDamage)).sendKeys(nbvo.getNewBusinessUninsuredUnderinsuredMotoristPropertyDamage());
-//        driver.findElement(By.name(ConstantsClass.newBusinessHomeOwnersDiscount)).sendKeys(nbvo.getNewBusinessHomeownersDiscount());
         driver.findElement(By.id(ConstantsClass.nextPageBottom)).click();
 //        Adding Driver 0r driver details
         driver.findElement(By.id(ConstantsClass.newBusinessAddDriver)).click();
@@ -130,7 +123,7 @@ public class NewBusiness_01 {
         driver.findElement(By.name(ConstantsClass.newBusinessDriver1SR22)).sendKeys(nbvo.getNewBusinessDriver1SR22());
 //        employee details
         driver.findElement(By.name(ConstantsClass.newBusinessDriver1OccupationStatus)).sendKeys(nbvo.getNewBusinessDriver1Occupation());
-       driver.findElement(By.id(ConstantsClass.nextPageBottom)).click();
+        driver.findElement(By.id(ConstantsClass.nextPageBottom)).click();
         driver.findElement(By.id(ConstantsClass.addNonDriver)).click();
         driver.findElement(By.id(ConstantsClass.newBusinessNonDriver1FirstName)).sendKeys(nbvo.getNewBusinessNonDriver1FirstName());
         driver.findElement(By.id(ConstantsClass.newBusinessNonDriver1MiddleName)).sendKeys(nbvo.getNewBusinessNonDriver1MiddleName());
@@ -139,6 +132,7 @@ public class NewBusiness_01 {
         driver.findElement(By.id(ConstantsClass.newBusinessNonDriver1NonDriverType)).sendKeys(nbvo.getNewBusinessNonDriver1NonDriverType());
         driver.findElement(By.id(ConstantsClass.newBusinessNonDriver1Gender)).sendKeys(nbvo.getNewBusinessNonDriver1Gender());
         driver.findElement(By.id(ConstantsClass.newBusinessNonDriver1BirthDate)).sendKeys(nbvo.getNewBusinessNonDriver1BirthDate());
+        driver.findElement(By.id(ConstantsClass.newBusinessNonDriver1NonRatedReason)).sendKeys(nbvo.getNewBusinessNonDriver1NonRatedReason());
         driver.findElement(By.id(ConstantsClass.newBusinessNonDriver1MaritalStatus)).sendKeys(nbvo.getNewBusinessNonDriver1MaritalStatus());
         driver.findElement(By.id(ConstantsClass.nextPageBottom)).click();
         driver.findElement(By.id(ConstantsClass.navigateAddRiskPrivatePassengerAuto)).click();
@@ -155,28 +149,45 @@ public class NewBusiness_01 {
         driver.findElement(By.name(ConstantsClass.newBusinessVehicle1RentalReimbursement)).sendKeys(nbvo.getNewBusinessVehicle1RentalReimbursement());
         driver.findElement(By.name(ConstantsClass.newBusinessVehicle1TowingAndLabor)).sendKeys(nbvo.getNewBusinessVehicle1TowingAndLabor());
         driver.findElement(By.name(ConstantsClass.newBusinessVehicle1SpecialEquipment)).sendKeys(nbvo.getNewBusinessVehicle1SpecialEquipment());
-       // driver.findElement(By.id(ConstantsClass.nextPageBottom)).click();
+        driver.findElement(By.id(ConstantsClass.nextPageBottom)).click();
         //Billing
-       driver.findElement(By.id(ConstantsClass.nextPageBottom)).click();
+        driver.findElement(By.id(ConstantsClass.nextPageBottom)).click();
         driver.findElement(By.id(ConstantsClass.newBusinessPayPlans)).click();
         driver.findElement(By.id(ConstantsClass.bindButton)).click();
+        driver.findElement(By.id(ConstantsClass.wizardAdditionalInterests)).click();
+        driver.findElement(By.id(ConstantsClass.addAdditionalInterest)).click();
+        driver.findElement(By.id(ConstantsClass.newBusinessAICode)).sendKeys(nbvo.getNewBusinessAICode());
+        driver.findElement(By.id(ConstantsClass.additionalInterestTypeCode)).click();
+        driver.findElement(By.id(ConstantsClass.additionalInterestTypeCode))
+                .sendKeys(nbvo.getNewBusinessAIInterestType(), Keys.ENTER);
+        driver.findElement(By.id(ConstantsClass.privatePassengerAutoCheckbox)).click();
         driver.findElement(By.id(ConstantsClass.newBusinessWizardUnderwriting)).click();
 //     Underwritting reasons
+        driver.findElement(By.id(ConstantsClass.questionOutsideWI)).sendKeys(nbvo.getNewBusinessUWQuestions());
         driver.findElement(By.id(ConstantsClass.questionProperLicense)).sendKeys(nbvo.getNewBusinessUWQuestions());
         driver.findElement(By.id(ConstantsClass.questionPossibleDriver)).sendKeys(nbvo.getNewBusinessUWQuestions());
         driver.findElement(By.id(ConstantsClass.questionDriverConviction)).sendKeys(nbvo.getNewBusinessUWQuestions());
+        driver.findElement(By.id(ConstantsClass.questionOtherVehicle)).sendKeys(nbvo.getNewBusinessUWQuestions());
         driver.findElement(By.id(ConstantsClass.questionHouseholdResident)).sendKeys(nbvo.getNewBusinessUWQuestions());
         driver.findElement(By.id(ConstantsClass.questionExcludedSpouse)).sendKeys(nbvo.getNewBusinessUWQuestions());
         driver.findElement(By.id(ConstantsClass.questionBusinessVehicle)).sendKeys(nbvo.getNewBusinessUWQuestions());
         driver.findElement(By.id(ConstantsClass.questionExistingDamage)).sendKeys(nbvo.getNewBusinessUWQuestions());
         driver.findElement(By.id(ConstantsClass.questionDifferentAddress)).sendKeys(nbvo.getNewBusinessUWQuestions());
         driver.findElement(By.id(ConstantsClass.questionSpecialEquipment)).sendKeys(nbvo.getNewBusinessUWQuestions());
-        driver.findElement(By.id(ConstantsClass.questionOtherVehicle)).sendKeys(nbvo.getNewBusinessUWQuestions());
-        driver.findElement(By.id(ConstantsClass.questionTitledVehicle)).sendKeys(nbvo.getNewBusinessUWQuestions());
+        driver.findElement(By.id(ConstantsClass.questionTitledSolelyVehicle)).sendKeys(nbvo.getNewBusinessUWQuestions());
         driver.findElement(By.id(ConstantsClass.questionDriverViolation)).sendKeys(nbvo.getNewBusinessUWQuestions());
         driver.findElement(By.id(ConstantsClass.questionDriverCondition)).sendKeys(nbvo.getNewBusinessUWQuestions());
         driver.findElement(By.id(ConstantsClass.questionVehicleModification)).sendKeys(nbvo.getNewBusinessUWQuestions());
         driver.findElement(By.id(ConstantsClass.questionLiveryVehicle)).sendKeys(nbvo.getNewBusinessUWQuestions());
+        driver.findElement(By.id(ConstantsClass.questionLiveryVehicleCov)).sendKeys(nbvo.getNewBusinessUWQuestions());
+        driver.findElement(By.id(ConstantsClass.questionAddLiveryVehicle)).sendKeys(nbvo.getNewBusinessUWQuestions());
+        driver.findElement(By.id(ConstantsClass.questionAddLiveryDeliveryCov)).sendKeys(nbvo.getNewBusinessUWQuestions());
+
+        driver.findElement(By.id(ConstantsClass.questionContentsPlusRenters)).sendKeys(nbvo.getNewBusinessUWQuestions());
+        driver.findElement(By.id(ConstantsClass.questionContentsPlusRentersLossDesc)).sendKeys(nbvo.getNewBusinessUWQuestions());
+        driver.findElement(By.id(ConstantsClass.questionContentsPlusRentersCrimeDesc)).sendKeys(nbvo.getNewBusinessUWQuestions());
+
+       // driver.findElement(By.id(ConstantsClass.questionTitledVehicle)).sendKeys(nbvo.getNewBusinessUWQuestions());
         driver.findElement(By.xpath(ConstantsClass.closeOut)).click();
 //        Payment close out screen
         driver.findElement(By.id(ConstantsClass.paymentTypeCode)).sendKeys(nbvo.getNewBusinessPaymentType());

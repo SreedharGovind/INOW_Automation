@@ -156,7 +156,7 @@ public class NewBusiness_NewCustomer_02 {
         driver.findElement(By.id(ConstantsClass.bindButton)).click();
         driver.findElement(By.id(ConstantsClass.newBusinessWizardUnderwriting)).click();
 //     Underwritting reasons
-        driver.findElement(By.id(ConstantsClass.questionProperLicense)).sendKeys(nbvo.getNewBusinessUWQuestions());
+     //   driver.findElement(By.id(ConstantsClass.questionProperLicense)).sendKeys(nbvo.getNewBusinessUWQuestions());
         driver.findElement(By.id(ConstantsClass.questionPossibleDriver)).sendKeys(nbvo.getNewBusinessUWQuestions());
         driver.findElement(By.id(ConstantsClass.questionDriverConviction)).sendKeys(nbvo.getNewBusinessUWQuestions());
         driver.findElement(By.id(ConstantsClass.questionHouseholdResident)).sendKeys(nbvo.getNewBusinessUWQuestions());

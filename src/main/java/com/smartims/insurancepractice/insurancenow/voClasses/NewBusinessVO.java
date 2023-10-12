@@ -174,6 +174,7 @@ public class NewBusinessVO {
     String newBusinessNonDriver1Gender;
     String newBusinessNonDriver1BirthDate;
     String newBusinessNonDriver1MaritalStatus;
+    String newBusinessNonDriver1NonRatedReason;
     String newBusinessNonDriver2FirstName;
     String newBusinessNonDriver2MiddleName;
     String newBusinessNonDriver2LastName;
@@ -3287,7 +3288,16 @@ public class NewBusinessVO {
         return newBusinessIssueNewBusiness;
     }
 
+    public String getNewBusinessNonDriver1NonRatedReason() {
+        return newBusinessNonDriver1NonRatedReason;
+    }
+
+    public void setNewBusinessNonDriver1NonRatedReason(String newBusinessNonDriver1NonRatedReason) {
+        this.newBusinessNonDriver1NonRatedReason = newBusinessNonDriver1NonRatedReason;
+    }
+
     public void setNewBusinessIssueNewBusiness(String newBusinessIssueNewBusiness) {
         this.newBusinessIssueNewBusiness = newBusinessIssueNewBusiness;
+
     }
 }

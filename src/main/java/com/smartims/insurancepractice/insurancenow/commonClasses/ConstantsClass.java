@@ -111,9 +111,13 @@ public class ConstantsClass {
     public static final String newBusinessPayPlans = "BasicPolicy.PayPlanCd_1";
     public static final String bindButton = "Bind";
     public static final String newBusinessWizardUnderwriting = "Wizard_Underwriting";
+    public static final String questionOutsideWI = "Question_OutsideWI";
+    public static final String questionTitledSolelyVehicle = "Question_TitledSolelyVehicle";
     public static final String questionProperLicense = "Question_ProperLicense";
     public static final String questionPossibleDriver = "Question_PossibleDriver";
     public static final String questionDriverConviction = "Question_DriverConviction";
+    public static final String questionAddLiveryVehicle = "Question_AddLiveryVehicle";
+    public static final String questionAddLiveryDeliveryCov = "Question_AddLiveryDeliveryCov";
     public static final String questionHouseholdResident = "Question_HouseholdResident";
     public static final String questionExcludedSpouse = "Question_ExcludedSpouse";
     public static final String questionBusinessVehicle = "Question_BusinessVehicle";
@@ -123,9 +127,15 @@ public class ConstantsClass {
     public static final String questionOtherVehicle = "Question_OtherVehicle";
     public static final String questionTitledVehicle = "Question_TitledVehicle";
     public static final String questionDriverViolation = "Question_DriverViolation";
+
     public static final String questionDriverCondition = "Question_DriverCondition";
     public static final String questionVehicleModification = "Question_VehicleModification";
     public static final String questionLiveryVehicle = "Question_LiveryVehicle";
+    public static final String questionContentsPlusRenters= "Question_ContentsPlusRenters";
+    public static final String questionContentsPlusRentersLossDesc= "Question_ContentsPlusRentersLossDesc";
+    public static final String questionContentsPlusRentersCrimeDesc= "Question_ContentsPlusRentersCrimeDesc";
+
+    public static final String questionLiveryVehicleCov = "Question_LiveryVehicleCov";
     public static final String closeOut = "//*[@id=\"Closeout\"]/span";
     public static final String paymentTypeCode = "TransactionInfo.PaymentTypeCd";
     public static final String process = "//*[@id=\"Process\"]/span";
@@ -138,9 +148,11 @@ public class ConstantsClass {
     public static final String endorsementNonDriver1BirthDate = "PersonInfo.BirthDt";
     public static final String endorsementNonDriver1Gender = "PersonInfo.GenderCd";
     public static final String endorsementNonDriver1MaritalStatus = "PersonInfo.MaritalStatusCd";
+    public static final String newBusinessNonDriver1NonRatedReason = "DriverInfo.NonRatedReason";
     public static final String wizardAdditionalInterests = "Wizard_AdditionalInterests";
     public static final String addAdditionalInterest = "AddAdditionalInterest";
     public static final String endorsementAICode = "AI.InterestCd";
+    public static final String newBusinessAICode = "AI.InterestCd";
     public static final String additionalInterestTypeCode = "AI.InterestTypeCd";
     public static final String saveButton = "//*[@id=\"Save\"]/span";
     public static final String finishButton = "Closeout";
