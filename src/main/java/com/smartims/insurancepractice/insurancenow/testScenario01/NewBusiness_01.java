@@ -61,7 +61,20 @@ public class NewBusiness_01 {
         nbvo.setNewBusinessVehicle1SpecialEquipment(ExcelUtils_01.getCellValueByLabel("newBusinessVehicle1SpecialEquipment"));
         nbvo.setNewBusinessUWQuestions(ExcelUtils_01.getCellValueByLabel("newBusinessUWQuestions"));
         nbvo.setNewBusinessPaymentType(ExcelUtils_01.getCellValueByLabel("newBusinessPaymentType"));
-        //Quote Creation
+        nbvo.setNewBusinessNonDriver1FirstName(ExcelUtils_01.getCellValueByLabel("newBusinessNonDriver1FirstName"));
+        nbvo.setNewBusinessNonDriver1MiddleName(ExcelUtils_01.getCellValueByLabel("newBusinessNonDriver1MiddleName"));
+        nbvo.setNewBusinessNonDriver1LastName(ExcelUtils_01.getCellValueByLabel("newBusinessNonDriver1LastName"));
+        nbvo.setNewBusinessNonDriver1RelationshipToInsured(ExcelUtils_01.getCellValueByLabel("newBusinessNonDriver1RelationshipToInsured"));
+        nbvo.setNewBusinessNonDriver1NonDriverType(ExcelUtils_01.getCellValueByLabel("newBusinessNonDriver1NonDriverType"));
+        nbvo.setNewBusinessNonDriver1Gender(ExcelUtils_01.getCellValueByLabel("newBusinessNonDriver1Gender"));
+        nbvo.setNewBusinessNonDriver1BirthDate(ExcelUtils_01.getCellValueByLabel("newBusinessNonDriver1BirthDate"));
+        nbvo.setNewBusinessNonDriver1MaritalStatus(ExcelUtils_01.getCellValueByLabel("newBusinessNonDriver1MaritalStatus"));
+
+
+
+
+
+        //New Business Creation
         driver.findElement(By.xpath(ConstantsClass.newQuoteButton)).click();
         driver.findElement(By.id(ConstantsClass.newBusinessStateCode)).sendKeys(nbvo.getNewBusinessState());
         driver.findElement(By.name(ConstantsClass.newBusinessEffectiveDate)).sendKeys(nbvo.getNewBusinessEffectiveDate());
@@ -73,7 +86,7 @@ public class NewBusiness_01 {
         driver.findElement(By.id(ConstantsClass.newBusinessProducerCode)).sendKeys(nbvo.getNewBusinessProducerCode());
         driver.findElement(By.id(ConstantsClass.newBusinessProducerLookup)).click();
         driver.findElement(By.name(ConstantsClass.basicPolicyNolapse)).sendKeys(nbvo.getNewBusinessDoesTheInsuredHavePriorInsuranceCoverageWithNoLapseOrALapseOfLessThan30Days());
-        driver.findElement(By.name(ConstantsClass.basicPolicyUninsuredMorethanThirtyDays)).sendKeys(nbvo.getNewBusinessHastheinsuredoperatedanuninsuredmotorvehicleformorethan30daysinthepast12months());
+       // driver.findElement(By.name(ConstantsClass.basicPolicyUninsuredMorethanThirtyDays)).sendKeys(nbvo.getNewBusinessHastheinsuredoperatedanuninsuredmotorvehicleformorethan30daysinthepast12months());
 //      Insured information
         driver.findElement(By.name(ConstantsClass.newBusinessEntityType)).sendKeys(nbvo.getNewBusinessEntityType());
         driver.findElement(By.name(ConstantsClass.newBusinessInsuredFirstName)).sendKeys(nbvo.getNewBusinessIndividualFirst());
@@ -94,13 +107,13 @@ public class NewBusiness_01 {
 //      Selecting the new customer
         driver.findElement(By.name("QuoteCustomerClearingRef")).click();
 //      Automobile Policy General Screen
-        driver.findElement(By.name(ConstantsClass.newBusinessBodilyInjuryLimit)).sendKeys(nbvo.getNewBusinessBodilyInjuryPerPersonPerAccident());
-        driver.findElement(By.name(ConstantsClass.newBusinessPropertyDamageLimit)).sendKeys(nbvo.getNewBusinessPropertyDamage());
-        driver.findElement(By.name(ConstantsClass.newBusinessMedicalPaymentLimit)).sendKeys(nbvo.getNewBusinessMedicalPayments());
-        driver.findElement(By.name(ConstantsClass.newBusinessPersonalInjuryProtectionLimit)).sendKeys(nbvo.getNewBusinessPersonalInjuryProtection());
-        driver.findElement(By.name(ConstantsClass.newBusinessUninsured_UnderInsuredMotoristBodilyInjury)).sendKeys(nbvo.getNewBusinessUninsuredUnderinsuredMotoristBodilyInjury());
-        driver.findElement(By.name(ConstantsClass.newBusinessUninsured_UnderInsuredMotoristPropertyDamage)).sendKeys(nbvo.getNewBusinessUninsuredUnderinsuredMotoristPropertyDamage());
-        driver.findElement(By.name(ConstantsClass.newBusinessHomeOwnersDiscount)).sendKeys(nbvo.getNewBusinessHomeownersDiscount());
+//       driver.findElement(By.name(ConstantsClass.newBusinessBodilyInjuryLimit)).sendKeys(nbvo.getNewBusinessBodilyInjuryPerPersonPerAccident());
+//        driver.findElement(By.name(ConstantsClass.newBusinessPropertyDamageLimit)).sendKeys(nbvo.getNewBusinessPropertyDamage());
+//        driver.findElement(By.name(ConstantsClass.newBusinessMedicalPaymentLimit)).sendKeys(nbvo.getNewBusinessMedicalPayments());
+//       driver.findElement(By.name(ConstantsClass.newBusinessPersonalInjuryProtectionLimit)).sendKeys(nbvo.getNewBusinessPersonalInjuryProtection());
+//        driver.findElement(By.name(ConstantsClass.newBusinessUninsured_UnderInsuredMotoristBodilyInjury)).sendKeys(nbvo.getNewBusinessUninsuredUnderinsuredMotoristBodilyInjury());
+//        driver.findElement(By.name(ConstantsClass.newBusinessUninsured_UnderInsuredMotoristPropertyDamage)).sendKeys(nbvo.getNewBusinessUninsuredUnderinsuredMotoristPropertyDamage());
+//        driver.findElement(By.name(ConstantsClass.newBusinessHomeOwnersDiscount)).sendKeys(nbvo.getNewBusinessHomeownersDiscount());
         driver.findElement(By.id(ConstantsClass.nextPageBottom)).click();
 //        Adding Driver 0r driver details
         driver.findElement(By.id(ConstantsClass.newBusinessAddDriver)).click();
@@ -117,6 +130,16 @@ public class NewBusiness_01 {
         driver.findElement(By.name(ConstantsClass.newBusinessDriver1SR22)).sendKeys(nbvo.getNewBusinessDriver1SR22());
 //        employee details
         driver.findElement(By.name(ConstantsClass.newBusinessDriver1OccupationStatus)).sendKeys(nbvo.getNewBusinessDriver1Occupation());
+       driver.findElement(By.id(ConstantsClass.nextPageBottom)).click();
+        driver.findElement(By.id(ConstantsClass.addNonDriver)).click();
+        driver.findElement(By.id(ConstantsClass.newBusinessNonDriver1FirstName)).sendKeys(nbvo.getNewBusinessNonDriver1FirstName());
+        driver.findElement(By.id(ConstantsClass.newBusinessNonDriver1MiddleName)).sendKeys(nbvo.getNewBusinessNonDriver1MiddleName());
+        driver.findElement(By.id(ConstantsClass.newBusinessNonDriver1LastName)).sendKeys(nbvo.getNewBusinessNonDriver1LastName());
+        driver.findElement(By.id(ConstantsClass.newBusinessNonDriver1RelationshipToInsured)).sendKeys(nbvo.getNewBusinessNonDriver1RelationshipToInsured());
+        driver.findElement(By.id(ConstantsClass.newBusinessNonDriver1NonDriverType)).sendKeys(nbvo.getNewBusinessNonDriver1NonDriverType());
+        driver.findElement(By.id(ConstantsClass.newBusinessNonDriver1Gender)).sendKeys(nbvo.getNewBusinessNonDriver1Gender());
+        driver.findElement(By.id(ConstantsClass.newBusinessNonDriver1BirthDate)).sendKeys(nbvo.getNewBusinessNonDriver1BirthDate());
+        driver.findElement(By.id(ConstantsClass.newBusinessNonDriver1MaritalStatus)).sendKeys(nbvo.getNewBusinessNonDriver1MaritalStatus());
         driver.findElement(By.id(ConstantsClass.nextPageBottom)).click();
         driver.findElement(By.id(ConstantsClass.navigateAddRiskPrivatePassengerAuto)).click();
 //         Adding vechile
@@ -132,9 +155,9 @@ public class NewBusiness_01 {
         driver.findElement(By.name(ConstantsClass.newBusinessVehicle1RentalReimbursement)).sendKeys(nbvo.getNewBusinessVehicle1RentalReimbursement());
         driver.findElement(By.name(ConstantsClass.newBusinessVehicle1TowingAndLabor)).sendKeys(nbvo.getNewBusinessVehicle1TowingAndLabor());
         driver.findElement(By.name(ConstantsClass.newBusinessVehicle1SpecialEquipment)).sendKeys(nbvo.getNewBusinessVehicle1SpecialEquipment());
-        driver.findElement(By.id(ConstantsClass.nextPageBottom)).click();
+       // driver.findElement(By.id(ConstantsClass.nextPageBottom)).click();
         //Billing
-        driver.findElement(By.id(ConstantsClass.nextPageBottom)).click();
+       driver.findElement(By.id(ConstantsClass.nextPageBottom)).click();
         driver.findElement(By.id(ConstantsClass.newBusinessPayPlans)).click();
         driver.findElement(By.id(ConstantsClass.bindButton)).click();
         driver.findElement(By.id(ConstantsClass.newBusinessWizardUnderwriting)).click();

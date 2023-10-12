@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class ExcelUtilsCredentials {
     public static String getCellValueByLabel(String label) throws IOException {
-        String excelFilePath ="INOW Automation Data Sheet.xlsx";
+        String excelFilePath = "INOW Automation Data Sheet.xlsx";
         FileInputStream file = new FileInputStream(new File(excelFilePath));
         String sheetName = "Credentials";
         Workbook workbook = WorkbookFactory.create(file);
