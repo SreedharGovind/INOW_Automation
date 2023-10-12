@@ -5,7 +5,7 @@ public class ConstantsClass {
     public static final String username = "j_username";
     public static final String password = "j_password";
 
-    public static final String newCustomer="//*[@id=\"Menu_Policy\"]";
+    public static final String newCustomer = "//*[@id=\"Menu_Policy\"]";
     public static final String menuPolicyNewCustomerAndQuote = "Menu_Policy_NewCustomerAndQuote";
     public static final String newCustomerEntityTypeCode = "Customer.EntityTypeCd";
     public static final String newCustomerGivenName = "CustomerName.GivenName";
@@ -22,16 +22,16 @@ public class ConstantsClass {
     public static final String newCustomerPostalCode = "CustomerLookupAddr.PostalCode";
     public static final String newCustomerAddressVerifyingImg = "CustomerLookupAddr.addrVerifyImg";
     public static final String newCustomerDefaultAddress = "DefaultAddress";
-    public static final String newCustomerMailingaddrVerifyImg= "CustomerMailingAddr.addrVerifyImg";
+    public static final String newCustomerMailingaddrVerifyImg = "CustomerMailingAddr.addrVerifyImg";
     public static final String newCustomerPrimaryPhoneName = "CustomerPhonePrimary.PhoneName";
     public static final String newCustomerPrimaryPhoneNumber = "CustomerPhonePrimary.PhoneNumber";
     public static final String newCustomerEmailAddress = "CustomerEmail.EmailAddr";
     public static final String copyMailingAddress = "CopyAddress";
     public static final String newCustomerBestWayToContact = "CustomerPersonal.BestWayToContact";
     public static final String newCustomerBestTimeToContact = "CustomerPersonal.BestTimeToContact";
-    public static final String newCustomerSaveButtom="Save";
+    public static final String newCustomerSaveButtom = "Save";
 
-    public static final String newCustomerSaveAndQuote="SaveAndQuote";
+    public static final String newCustomerSaveAndQuote = "SaveAndQuote";
     public static final String saveAndQuoteButton = "//*[@id=\"SaveAndQuote\"]/span";
     public static final String newQuoteButton = "//*[@id=\"QuickAction_NewQuote_Holder\"]/span";
     public static final String newBusinessStateCode = "QuickAction_StateCd";
@@ -83,6 +83,21 @@ public class ConstantsClass {
     public static final String newBusinessDriver1SR22 = "DriverInfo.SR22";
     //    public static final String  = "DriverInfo.ScholasticDiscountInd";
     public static final String newBusinessDriver1OccupationStatus = "PersonInfo.OccupationStatus";
+
+
+//    // ADD Driver
+    public static final String addNonDriver = "AddNonDriver";
+    public static final String newBusinessNonDriver1FirstName = "NameInfo.GivenName";
+    public static final String newBusinessNonDriver1MiddleName = "NameInfo.OtherGivenName";
+    public static final String newBusinessNonDriver1LastName = "NameInfo.Surname";
+    public static final String newBusinessNonDriver1RelationshipToInsured = "DriverInfo.RelationshipToInsuredCd";
+    public static final String newBusinessNonDriver1NonDriverType = "DriverInfo.DriverTypeCd";
+    public static final String newBusinessNonDriver1Gender = "PersonInfo.GenderCd";
+    public static final String newBusinessNonDriver1BirthDate = "PersonInfo.BirthDt";
+    public static final String newBusinessNonDriver1MaritalStatus = "PersonInfo.MaritalStatusCd";
+    //    public static final String  = ;
+    //    public static final String  = ;
+    //    public static final String  = ;
     public static final String navigateAddRiskPrivatePassengerAuto = "Navigate_AddRisk_PrivatePassengerAuto";
     public static final String newBusinessVehicle1VIN = "Vehicle.VehIdentificationNumber";
     public static final String validateVin = "ValidateVIN";
@@ -115,7 +130,7 @@ public class ConstantsClass {
     public static final String paymentTypeCode = "TransactionInfo.PaymentTypeCd";
     public static final String process = "//*[@id=\"Process\"]/span";
     public static final String wizardNonDrivers = "Wizard_Non-Drivers";
-    public static final String addNonDriver = "AddNonDriver";
+
     public static final String endorsementNonDriver1NonDriverType = "DriverInfo.DriverTypeCd";
     public static final String endorsementNonDriver1FirstName = "NameInfo.GivenName";
     public static final String endorsementNonDriver1LastName = "NameInfo.Surname";

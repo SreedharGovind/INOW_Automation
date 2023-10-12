@@ -134,7 +134,7 @@ public class NewBusiness_NewCustomer_02 {
         driver.findElement(By.name(ConstantsClass.newBusinessDriver1SR22)).sendKeys(nbvo.getNewBusinessDriver1SR22());
 //        employee details
         driver.findElement(By.name(ConstantsClass.newBusinessDriver1OccupationStatus)).sendKeys(nbvo.getNewBusinessDriver1Occupation());
-        driver.findElement(By.id(ConstantsClass.nextPageBottom)).click();
+        // driver.findElement(By.id(ConstantsClass.nextPageBottom)).click();
         driver.findElement(By.id(ConstantsClass.navigateAddRiskPrivatePassengerAuto)).click();
 //         Adding vechile
         driver.findElement(By.name(ConstantsClass.newBusinessVehicle1VIN)).sendKeys(nbvo.getNewBusinessVehicle1VIN());
