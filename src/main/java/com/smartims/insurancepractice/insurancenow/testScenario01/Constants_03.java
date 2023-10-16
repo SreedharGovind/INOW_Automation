@@ -1,44 +1,14 @@
-package com.smartims.insurancepractice.insurancenow.commonClasses;
+package com.smartims.insurancepractice.insurancenow.testScenario01;
 
-public class ConstantsClass {
+public class Constants_03 {
     public static final String localHostUrl = "http://localhost:8080/innovation";
     public static final String username = "j_username";
     public static final String password = "j_password";
-
-    public static final String newCustomer = "//*[@id=\"Menu_Policy\"]";
-    public static final String menuPolicyNewCustomerAndQuote = "Menu_Policy_NewCustomerAndQuote";
-    public static final String newCustomerEntityTypeCode = "Customer.EntityTypeCd";
-    public static final String newCustomerGivenName = "CustomerName.GivenName";
-    public static final String newCustomerSurname = "CustomerName.Surname";
-    public static final String newCustomerDateOfBirth = "CustomerPersonal.BirthDt";
-
-    public static final String menuPolicyButton = "//*[@id=\"Menu_Policy\"]";
-    public static final String newCustomerResetCommercialName = "ResetCommercialName";
-    public static final String newCustomerResetIndexName = "ResetIndexName";
-    public static final String newCustomerAddressPrimaryNumber = "CustomerLookupAddr.PrimaryNumber";
-    public static final String newCustomerAddressStreetName = "CustomerLookupAddr.StreetName";
-    public static final String newCustomerCity = "CustomerLookupAddr.City";
-    public static final String newCustomerState = "CustomerLookupAddr.StateProvCd";
-    public static final String newCustomerPostalCode = "CustomerLookupAddr.PostalCode";
-    public static final String newCustomerAddressVerifyingImg = "CustomerLookupAddr.addrVerifyImg";
-    public static final String newCustomerDefaultAddress = "DefaultAddress";
-    public static final String newCustomerMailingaddrVerifyImg = "CustomerMailingAddr.addrVerifyImg";
-    public static final String newCustomerPrimaryPhoneName = "CustomerPhonePrimary.PhoneName";
-    public static final String newCustomerPrimaryPhoneNumber = "CustomerPhonePrimary.PhoneNumber";
-    public static final String newCustomerEmailAddress = "CustomerEmail.EmailAddr";
-    public static final String copyMailingAddress = "CopyAddress";
-    public static final String newCustomerBestWayToContact = "CustomerPersonal.BestWayToContact";
-    public static final String newCustomerBestTimeToContact = "CustomerPersonal.BestTimeToContact";
-    public static final String newCustomerSaveButtom = "Save";
-
-    public static final String newCustomerSaveAndQuote = "SaveAndQuote";
-    public static final String saveAndQuoteButton = "//*[@id=\"SaveAndQuote\"]/span";
     public static final String newQuoteButton = "//*[@id=\"QuickAction_NewQuote_Holder\"]/span";
     public static final String newBusinessStateCode = "QuickAction_StateCd";
     public static final String newBusinessEffectiveDate = "QuickAction_EffectiveDt";
 
     public static final String newBusinessProgramType = "QuickAction_ProgramType";
-    public static final String basicPolicyControllingStateCode = "BasicPolicy.ControllingStateCd";
     public static final String quickActionNewQuote = "QuickAction_NewQuote";
     public static final String continueButton = "Continue";
     public static final String newBusinessProducerCode = "ProviderNumber";
@@ -81,23 +51,8 @@ public class ConstantsClass {
     public static final String newBusinessDriver1LicenseNumber = "DriverInfo.LicenseNumber";
     public static final String newBusinessDriver1LicenseStatus = "DriverInfo.LicenseStatus";
     public static final String newBusinessDriver1SR22 = "DriverInfo.SR22";
-    //    public static final String  = "DriverInfo.ScholasticDiscountInd";
+    // public static final String = "DriverInfo.ScholasticDiscountInd";
     public static final String newBusinessDriver1OccupationStatus = "PersonInfo.OccupationStatus";
-
-
-//    // ADD Driver
-    public static final String addNonDriver = "AddNonDriver";
-    public static final String newBusinessNonDriver1FirstName = "NameInfo.GivenName";
-    public static final String newBusinessNonDriver1MiddleName = "NameInfo.OtherGivenName";
-    public static final String newBusinessNonDriver1LastName = "NameInfo.Surname";
-    public static final String newBusinessNonDriver1RelationshipToInsured = "DriverInfo.RelationshipToInsuredCd";
-    public static final String newBusinessNonDriver1NonDriverType = "DriverInfo.DriverTypeCd";
-    public static final String newBusinessNonDriver1Gender = "PersonInfo.GenderCd";
-    public static final String newBusinessNonDriver1BirthDate = "PersonInfo.BirthDt";
-    public static final String newBusinessNonDriver1MaritalStatus = "PersonInfo.MaritalStatusCd";
-    //    public static final String  = ;
-    //    public static final String  = ;
-    //    public static final String  = ;
     public static final String navigateAddRiskPrivatePassengerAuto = "Navigate_AddRisk_PrivatePassengerAuto";
     public static final String newBusinessVehicle1VIN = "Vehicle.VehIdentificationNumber";
     public static final String validateVin = "ValidateVIN";
@@ -111,13 +66,9 @@ public class ConstantsClass {
     public static final String newBusinessPayPlans = "BasicPolicy.PayPlanCd_1";
     public static final String bindButton = "Bind";
     public static final String newBusinessWizardUnderwriting = "Wizard_Underwriting";
-    public static final String questionOutsideWI = "Question_OutsideWI";
-    public static final String questionTitledSolelyVehicle = "Question_TitledSolelyVehicle";
     public static final String questionProperLicense = "Question_ProperLicense";
     public static final String questionPossibleDriver = "Question_PossibleDriver";
     public static final String questionDriverConviction = "Question_DriverConviction";
-    public static final String questionAddLiveryVehicle = "Question_AddLiveryVehicle";
-    public static final String questionAddLiveryDeliveryCov = "Question_AddLiveryDeliveryCov";
     public static final String questionHouseholdResident = "Question_HouseholdResident";
     public static final String questionExcludedSpouse = "Question_ExcludedSpouse";
     public static final String questionBusinessVehicle = "Question_BusinessVehicle";
@@ -127,48 +78,18 @@ public class ConstantsClass {
     public static final String questionOtherVehicle = "Question_OtherVehicle";
     public static final String questionTitledVehicle = "Question_TitledVehicle";
     public static final String questionDriverViolation = "Question_DriverViolation";
-
     public static final String questionDriverCondition = "Question_DriverCondition";
     public static final String questionVehicleModification = "Question_VehicleModification";
     public static final String questionLiveryVehicle = "Question_LiveryVehicle";
-    public static final String questionContentsPlusRenters= "Question_ContentsPlusRenters";
-    public static final String questionContentsPlusRentersLossDesc= "Question_ContentsPlusRentersLossDesc";
-    public static final String questionContentsPlusRentersCrimeDesc= "Question_ContentsPlusRentersCrimeDesc";
-
-    public static final String questionLiveryVehicleCov = "Question_LiveryVehicleCov";
     public static final String closeOut = "//*[@id=\"Closeout\"]/span";
     public static final String paymentTypeCode = "TransactionInfo.PaymentTypeCd";
     public static final String process = "//*[@id=\"Process\"]/span";
-    public static final String wizardNonDrivers = "Wizard_Non-Drivers";
+// public static final String = "";
+// public static final String = "";
+// public static final String = "";
+// public static final String = "";
+// public static final String = "";
 
-    public static final String endorsementNonDriver1NonDriverType = "DriverInfo.DriverTypeCd";
-    public static final String endorsementNonDriver1FirstName = "NameInfo.GivenName";
-    public static final String endorsementNonDriver1LastName = "NameInfo.Surname";
-    public static final String endorsementNonDriver1RelationshipToInsured = "DriverInfo.RelationshipToInsuredCd";
-    public static final String endorsementNonDriver1BirthDate = "PersonInfo.BirthDt";
-    public static final String endorsementNonDriver1Gender = "PersonInfo.GenderCd";
-    public static final String endorsementNonDriver1MaritalStatus = "PersonInfo.MaritalStatusCd";
-    public static final String newBusinessNonDriver1NonRatedReason = "DriverInfo.NonRatedReason";
-    public static final String wizardAdditionalInterests = "Wizard_AdditionalInterests";
-    public static final String addAdditionalInterest = "AddAdditionalInterest";
-    public static final String endorsementAICode = "AI.InterestCd";
-    public static final String newBusinessAICode = "AI.InterestCd";
-    public static final String additionalInterestTypeCode = "AI.InterestTypeCd";
-    public static final String saveButton = "//*[@id=\"Save\"]/span";
-    public static final String finishButton = "Closeout";
-    public static final String aIDetailLookup = "AIDetail_Lookup";
-    public static final String search = "Search";
-    public static final String privatePassengerAutoCheckbox = "LinkReferenceInclude_0";
-    public static final String navigateNonDriverParty = "Navigate_NonDriverParty";
-    public static final String wizardVehicle = "Wizard_Vehicles";
-    public static final String addVehicleButtonSidebar = "Navigate_AddRisk_PrivatePassengerAuto";
-    public static final String completeEndorsementTransactionButton = "//*[@id=\"Process\"]/span";
-    //    public static final String  = ;
-    //    public static final String  = ;
-    //    public static final String  = ;
-    //    public static final String  = ;
-    //    public static final String  = ;
-    //    public static final String  = ;
     public static final String policySearchTab = "//*[@id=\"AdvancedSearchPolicy\"]";
     public static final String policyNumberTextField = "//*[@id=\"PolicyNumber\"]";
     public static final String searchButton = "//*[@id=\"SearchPolicy\"]";
@@ -185,21 +106,47 @@ public class ConstantsClass {
     public static final String cancellationType = "//*[@id=\"CancelRequestedByCd\"]";
     public static final String additionalNoticeText = "//*[@id=\"TransactionLongDescription\"]";
     public static final String processButton = "//*[@id=\"Process\"]/span";
+
     public static final String cancellationReason= "ReasonCd";
 
     public static final String cancellationReasonADD= "Add";
-    //    Exixting customer
-    public static final String existingCustomer = "//*[@id=\"Menu_Policy\"]";
-    public static final String existingCustomerPolicyProcessing = "Menu_Policy_PolicyProcessing";
-    public static final String existingCustomerCustomerSearchBy = "CustomerSearchBy";
-    public static final String existingCustomerCustomerSearchText = "CustomerSearchText";
-    public static final String existingCustomerSearch = "Search";
-    public static final String existingCustomerCustomerList = "//*[@id=\"CustomerList\"]/table/tbody/tr[2]/td[2]/a";
-    public static final String existingCustomerNewQuote = "NewQuote";
-    public static final String existingCustomerControllingStateCd = "BasicPolicy.ControllingStateCd";
-    public static final String existingCustomerEffectiveDt = "BasicPolicy.EffectiveDt";
-    public static final String existingCustomerProgramType = "BasicPolicy.ProgramType";
 
+    public static final String contextMenuHistoryActions= "ContextMenuHistoryActions_1_2";
+    public static final String billingTabId = "Tab_Billing";
+    public static final String adminTabId = "Menu_Admin";
+    public static final String changeDateId = "Menu_Admin_ChangeDate";
+    public static final String makePayment = "/html/body/main/form/div[1]/aside[2]/div[2]/div[1]/a[3]/span";
+    public static final String pay = "QuickAction_SubmitPayment";
+    public static final String newACH = "PaymentTypeCd_1";
+    //public static final String bankAccount= "PaymentTypeCd_1";
+    public static final String newPremiumAmount = "PremiumReceiptAmt";
+    public static final String totalAmount = "ReceiptAmt";
+    public static final String enterCreditCardDetailsId = "EnterCreditCardDetails";
+    public static final String cardBillingAddressSubmitButton = "/html/body/form/div[5]/div/button";
+    public static final String bankAccountEntryType = "ACHStandardEntryClassCd";
+    public static final String bankAccountType = "ACHBankAccountTypeCd";
+    public static final String accountNumber = "ACHBankAccountNumber";
+    public static final String routingNumber = "ACHRoutingNumber";
+    public static final String achName = "ACHName";
+    public static final String submitPaymentButton = "/html/body/main/form/div[1]/div/div[2]/div/div[1]/div/div/div/div[3]/a/span";
+    public static final String submitPaymentOk = "dialogOK";
 
+    // Batch job
+    public static final String operations = "Menu_Admin";
+    public static final String batchJob = "NewDate";
+    public static final String dailyManual = "NewBookDate";
+
+    public static final String batchJobRunDate = "batchJobRunDate";
+    public static final String batchJobInceptionDate = "batchJobInceptionDate";
+    public static final String questionRunDt = "Question_RunDt";
+
+    public static final String question_InceptionDt = "Question_InceptionDt";
+    public static final String skipAll = "SkipAll";
+    public static final String skip_ActionARCycle = "Skip_ActionARCycle";
+    public static final String skip_ActionTaskSystem = "Skip_ActionTaskSystem";
+    public static final String startJobAction = "StartJobAction";
+// public static final String = "";
+    // public static final String = "";
+// public static final String = "";
+// public static final String = "";
 }
-
