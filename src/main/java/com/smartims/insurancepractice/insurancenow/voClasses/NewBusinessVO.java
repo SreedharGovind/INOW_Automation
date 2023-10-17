@@ -1,6 +1,7 @@
 package com.smartims.insurancepractice.insurancenow.voClasses;
 
 public class NewBusinessVO {
+
     String newBusinessEffectiveDate;
     String newBusinessState;
     String newBusinessProgramType;
@@ -11,15 +12,9 @@ public class NewBusinessVO {
     String newBusinessDoesTheInsuredHavePriorInsuranceCoverageWithNoLapseOrALapseOfLessThan30Days;
     String newBusinessHastheinsuredoperatedanuninsuredmotorvehicleformorethan30daysinthepast12months;
     String newBusinessNamedNonOwnerPolicy;
-
-    public String getNewBusinessHastheinsuredoperatedanuninsuredmotorvehicleformorethan30daysinthepast12months() {
-        return newBusinessHastheinsuredoperatedanuninsuredmotorvehicleformorethan30daysinthepast12months;
-    }
-
-    public void setNewBusinessHastheinsuredoperatedanuninsuredmotorvehicleformorethan30daysinthepast12months(String newBusinessHastheinsuredoperatedanuninsuredmotorvehicleformorethan30daysinthepast12months) {
-        this.newBusinessHastheinsuredoperatedanuninsuredmotorvehicleformorethan30daysinthepast12months = newBusinessHastheinsuredoperatedanuninsuredmotorvehicleformorethan30daysinthepast12months;
-    }
-
+    String newBusinessDoesTheInsuredHavePriorInsuranceCoverageWithNoLapseOraLapse21DaysOrLess;
+    String newBusinessUninsuredMotoristBodilyInjury;
+    String newBusinessUnderinsuredMotoristBodilyInjury;
     String newBusinessContentsPlusRentersEndorsement;
     String newBusinessEntityType;
     String newBusinessIndividualFirst;
@@ -764,6 +759,23 @@ public class NewBusinessVO {
         this.newBusinessBodilyInjuryPerPersonPerAccident = newBusinessBodilyInjuryPerPersonPerAccident;
     }
 
+    public String getNewBusinessHastheinsuredoperatedanuninsuredmotorvehicleformorethan30daysinthepast12months() {
+        return newBusinessHastheinsuredoperatedanuninsuredmotorvehicleformorethan30daysinthepast12months;
+    }
+
+    public void setNewBusinessHastheinsuredoperatedanuninsuredmotorvehicleformorethan30daysinthepast12months(String newBusinessHastheinsuredoperatedanuninsuredmotorvehicleformorethan30daysinthepast12months) {
+        this.newBusinessHastheinsuredoperatedanuninsuredmotorvehicleformorethan30daysinthepast12months = newBusinessHastheinsuredoperatedanuninsuredmotorvehicleformorethan30daysinthepast12months;
+    }
+
+    public String getNewBusinessDoesTheInsuredHavePriorInsuranceCoverageWithNoLapseOraLapse21DaysOrLess() {
+        return newBusinessDoesTheInsuredHavePriorInsuranceCoverageWithNoLapseOraLapse21DaysOrLess;
+    }
+
+    public void setNewBusinessDoesTheInsuredHavePriorInsuranceCoverageWithNoLapseOraLapse21DaysOrLess(
+            String newBusinessDoesTheInsuredHavePriorInsuranceCoverageWithNoLapseOraLapse21DaysOrLess) {
+        this.newBusinessDoesTheInsuredHavePriorInsuranceCoverageWithNoLapseOraLapse21DaysOrLess = newBusinessDoesTheInsuredHavePriorInsuranceCoverageWithNoLapseOraLapse21DaysOrLess;
+    }
+
     public String getNewBusinessPropertyDamage() {
         return newBusinessPropertyDamage;
     }
@@ -786,6 +798,22 @@ public class NewBusinessVO {
 
     public void setNewBusinessPersonalInjuryProtection(String newBusinessPersonalInjuryProtection) {
         this.newBusinessPersonalInjuryProtection = newBusinessPersonalInjuryProtection;
+    }
+
+    public String getNewBusinessUninsuredMotoristBodilyInjury() {
+        return newBusinessUninsuredMotoristBodilyInjury;
+    }
+
+    public void setNewBusinessUninsuredMotoristBodilyInjury(String newBusinessUninsuredMotoristBodilyInjury) {
+        this.newBusinessUninsuredMotoristBodilyInjury = newBusinessUninsuredMotoristBodilyInjury;
+    }
+
+    public String getNewBusinessUnderinsuredMotoristBodilyInjury() {
+        return newBusinessUnderinsuredMotoristBodilyInjury;
+    }
+
+    public void setNewBusinessUnderinsuredMotoristBodilyInjury(String newBusinessUnderinsuredMotoristBodilyInjury) {
+        this.newBusinessUnderinsuredMotoristBodilyInjury = newBusinessUnderinsuredMotoristBodilyInjury;
     }
 
     public String getNewBusinessUninsuredUnderinsuredMotoristBodilyInjury() {
