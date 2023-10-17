@@ -85,7 +85,7 @@ public class ConstantsClass {
     public static final String newBusinessDriver1OccupationStatus = "PersonInfo.OccupationStatus";
 
 
-//    // ADD Driver
+    //    // ADD Driver
     public static final String addNonDriver = "AddNonDriver";
     public static final String newBusinessNonDriver1FirstName = "NameInfo.GivenName";
     public static final String newBusinessNonDriver1MiddleName = "NameInfo.OtherGivenName";
@@ -131,15 +131,33 @@ public class ConstantsClass {
     public static final String questionDriverCondition = "Question_DriverCondition";
     public static final String questionVehicleModification = "Question_VehicleModification";
     public static final String questionLiveryVehicle = "Question_LiveryVehicle";
-    public static final String questionContentsPlusRenters= "Question_ContentsPlusRenters";
-    public static final String questionContentsPlusRentersLossDesc= "Question_ContentsPlusRentersLossDesc";
-    public static final String questionContentsPlusRentersCrimeDesc= "Question_ContentsPlusRentersCrimeDesc";
+    public static final String questionContentsPlusRenters = "Question_ContentsPlusRenters";
+    public static final String questionContentsPlusRentersLossDesc = "Question_ContentsPlusRentersLossDesc";
+    public static final String questionContentsPlusRentersCrimeDesc = "Question_ContentsPlusRentersCrimeDesc";
 
     public static final String questionLiveryVehicleCov = "Question_LiveryVehicleCov";
     public static final String closeOut = "//*[@id=\"Closeout\"]/span";
     public static final String paymentTypeCode = "TransactionInfo.PaymentTypeCd";
     public static final String process = "//*[@id=\"Process\"]/span";
     public static final String wizardNonDrivers = "Wizard_Non-Drivers";
+
+    //    Changes
+    public static final String newBusinessUnInsuredMotoristBodilyInjury = "Line.UMBILimit";
+    public static final String newBusinessUnderInsuredMotoristBodilyInjury = "Line.UIMBLimit";
+    public static final String newBusinessNewQuoteCustomer = "QuoteCustomerClearingRef_3";
+    public static final String newBusinessDriver1OccupationCategory = "PersonInfo.OccupationCategory";
+    public static final String newBusinessDriver1Lastname = "NameInfo.Surname";
+    public static final String sideBarAddDriverNavigateDriverParty = "Navigate_DriverParty";
+    public static final String newBusinessNonRatedReason = "DriverInfo.NonRatedReason";
+    // Wisconsin
+    public static final String cancellationReasonAdd = "Add";
+    public static final String payplanTabWizardReview = "Wizard_Review";
+    public static final String endorsementIndividualSuffix = "InsuredName.SuffixCd";
+    public static final String wizardDriversSidebarButton = "Wizard_Drivers";
+    public static final String endorsementDriver1EditLinkButton = "EditLink_1";
+    public static final String jointInsuredFirstName = "InsuredNameJoint.GivenName";
+    public static final String jointInsuredLastName = "InsuredNameJoint.Surname";
+    public static final String jointInsuredBirthdate = "InsuredPersonalJoint.BirthDt";
 
     public static final String endorsementNonDriver1NonDriverType = "DriverInfo.DriverTypeCd";
     public static final String endorsementNonDriver1FirstName = "NameInfo.GivenName";
@@ -149,6 +167,7 @@ public class ConstantsClass {
     public static final String endorsementNonDriver1Gender = "PersonInfo.GenderCd";
     public static final String endorsementNonDriver1MaritalStatus = "PersonInfo.MaritalStatusCd";
     public static final String newBusinessNonDriver1NonRatedReason = "DriverInfo.NonRatedReason";
+    public static final String newBusinessCreateApplicationButton = "//*[@id=\"Bind\"]/span";
     public static final String wizardAdditionalInterests = "Wizard_AdditionalInterests";
     public static final String addAdditionalInterest = "AddAdditionalInterest";
     public static final String endorsementAICode = "AI.InterestCd";
@@ -185,9 +204,9 @@ public class ConstantsClass {
     public static final String cancellationType = "//*[@id=\"CancelRequestedByCd\"]";
     public static final String additionalNoticeText = "//*[@id=\"TransactionLongDescription\"]";
     public static final String processButton = "//*[@id=\"Process\"]/span";
-    public static final String cancellationReason= "ReasonCd";
+    public static final String cancellationReason = "ReasonCd";
 
-    public static final String cancellationReasonADD= "Add";
+    public static final String cancellationReasonADD = "Add";
     //    Exixting customer
     public static final String existingCustomer = "//*[@id=\"Menu_Policy\"]";
     public static final String existingCustomerPolicyProcessing = "Menu_Policy_PolicyProcessing";
