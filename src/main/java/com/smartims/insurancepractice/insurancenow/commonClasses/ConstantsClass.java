@@ -158,6 +158,7 @@ public class ConstantsClass {
     public static final String jointInsuredFirstName = "InsuredNameJoint.GivenName";
     public static final String jointInsuredLastName = "InsuredNameJoint.Surname";
     public static final String jointInsuredBirthdate = "InsuredPersonalJoint.BirthDt";
+    public static final String wizardPayplansButton = "Wizard_Review";
 
     public static final String endorsementNonDriver1NonDriverType = "DriverInfo.DriverTypeCd";
     public static final String endorsementNonDriver1FirstName = "NameInfo.GivenName";

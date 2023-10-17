@@ -326,10 +326,9 @@ public class NewBusiness_02 {
                     .sendKeys(nvo.getNewBusinessAIInterestType(), Keys.ENTER);
             driver.findElement(By.id(ConstantsClass.privatePassengerAutoCheckbox)).click();
         }
-        driver.findElement(By.id(ConstantsClass.nextPageBottom)).click();
-        driver.findElement(By.id(ConstantsClass.nextPageBottom)).click();
+        driver.findElement(By.id(ConstantsClass.wizardPayplansButton)).click();
         driver.findElement(By.id(ConstantsClass.newBusinessPayPlans)).click();
-        driver.findElement(By.id(ConstantsClass.bindButton)).click();
+        driver.findElement(By.id(ConstantsClass.saveButton)).click();
         driver.findElement(By.id(ConstantsClass.newBusinessWizardUnderwriting)).click();
         driver.findElement(By.id(ConstantsClass.questionOutsideWI)).sendKeys(nvo.getNewBusinessUWQuestions());
         driver.findElement(By.id(ConstantsClass.questionProperLicense)).sendKeys(nvo.getNewBusinessUWQuestions());
