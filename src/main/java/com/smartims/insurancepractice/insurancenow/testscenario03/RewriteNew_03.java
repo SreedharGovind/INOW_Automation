@@ -1,5 +1,6 @@
 package com.smartims.insurancepractice.insurancenow.testscenario03;
 
+import com.smartims.insurancepractice.insurancenow.commonClasses.ConstantsClass;
 import com.smartims.insurancepractice.insurancenow.voClasses.RewriteNewVO;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,23 +17,23 @@ public class RewriteNew_03 {
         rw.setRewriteNewEffectiveDate(ExcelUtils_03.getCellValueByLabel("rewriteNewEffectiveDate"));
         rw.setRewriteNewPaymentType(ExcelUtils_03.getCellValueByLabel("rewriteNewPaymentType"));
         SeleniumToExcel_03 se = new SeleniumToExcel_03();
-//        driver.findElement(By.id(ConstantClass_02.rewriteNewToolbarSearchText)).sendKeys("PA0000051-01");
-//        driver.findElement(By.id(ConstantClass_02.rewriteNewToolbarSearch)).click();
-        driver.findElement(By.xpath(ConstantClass_02.rewriteNewTransaction)).click();
-        driver.findElement(By.id(ConstantClass_02.rewriteNewTransactionCd)).sendKeys("Rewrite-New");
-        driver.findElement(By.id(ConstantClass_02.rewriteNewSelect)).click();
-        driver.findElement(By.id(ConstantClass_02.rewriteNewTransactionEffectiveDt)).sendKeys("01/02/2024");
+//        driver.findElement(By.id(ConstantsClass.rewriteNewToolbarSearchText)).sendKeys("PA0000051-01");
+//        driver.findElement(By.id(ConstantsClass.rewriteNewToolbarSearch)).click();
+        driver.findElement(By.xpath(ConstantsClass.rewriteNewTransaction)).click();
+        driver.findElement(By.id(ConstantsClass.rewriteNewTransactionCd)).sendKeys("Rewrite-New");
+        driver.findElement(By.id(ConstantsClass.rewriteNewSelect)).click();
+        driver.findElement(By.id(ConstantsClass.rewriteNewTransactionEffectiveDt)).sendKeys("01/02/2024");
 //        driver.findElement(By.id("TransactionShortDescription")).sendKeys("Rewrite - New Business");
-//        driver.findElement(By.id(ConstantClass_02.rewriteNewTransactionLongDescription)).sendKeys("Rewrite");
-        driver.findElement(By.id(ConstantClass_02.rewriteNewStart)).click();
-        driver.findElement(By.id(ConstantClass_02.rewriteNewStart)).click();
-        driver.findElement(By.id(ConstantClass_02.rewriteNewUnderwriting)).click();
-        driver.findElement(By.id(ConstantClass_02.rewriteNewSave)).click();
-        driver.findElement(By.id(ConstantClass_02.rewriteNewReview)).click();
-        driver.findElement(By.id(ConstantClass_02.rewriteNewWizard_ReviewBasicPolicyPayPlanCd_1)).click();
-        driver.findElement(By.id(ConstantClass_02.rewriteNewCloseout)).click();
-        driver.findElement(By.id(ConstantClass_02.rewriteNewTransactionInfoPaymentTypeCd)).sendKeys("None");
-        driver.findElement(By.id(ConstantClass_02.rewriteNewProcess)).click();
+//        driver.findElement(By.id(ConstantsClass.rewriteNewTransactionLongDescription)).sendKeys("Rewrite");
+        driver.findElement(By.id(ConstantsClass.rewriteNewStart)).click();
+        driver.findElement(By.id(ConstantsClass.rewriteNewStart)).click();
+        driver.findElement(By.id(ConstantsClass.rewriteNewUnderwriting)).click();
+        driver.findElement(By.id(ConstantsClass.rewriteNewSave)).click();
+        driver.findElement(By.id(ConstantsClass.rewriteNewReview)).click();
+        driver.findElement(By.id(ConstantsClass.rewriteNewWizard_ReviewBasicPolicyPayPlanCd_1)).click();
+        driver.findElement(By.id(ConstantsClass.rewriteNewCloseout)).click();
+        driver.findElement(By.id(ConstantsClass.rewriteNewTransactionInfoPaymentTypeCd)).sendKeys("None");
+        driver.findElement(By.id(ConstantsClass.rewriteNewProcess)).click();
         Robot robot = new Robot();
         Thread.sleep(20000);
         robot.keyPress(KeyEvent.VK_CONTROL); // Press CTRL key
