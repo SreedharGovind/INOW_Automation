@@ -132,9 +132,13 @@ public class Constants_03 {
     public static final String submitPaymentOk = "dialogOK";
 
     // Batch job
-    public static final String operations = "Menu_Admin";
-    public static final String batchJob = "NewDate";
-    public static final String dailyManual = "NewBookDate";
+    public static final String menuOperations= "Menu_Operations";
+    public static final String menuOperationsBatchJobs= "Menu_Operations_BatchJobs";
+    public static final String dailyManual= "DailyManual";
+
+    public static final String adminMenu = "Menu_Admin";
+    public static final String newdate = "NewDate";
+    public static final String newBookDate = "NewBookDate";
 
     public static final String batchJobRunDate = "batchJobRunDate";
     public static final String batchJobInceptionDate = "batchJobInceptionDate";

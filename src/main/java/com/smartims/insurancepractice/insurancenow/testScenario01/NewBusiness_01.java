@@ -6,10 +6,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 
 public class NewBusiness_01 {
-    public void getNewBussines(ChromeDriver driver) throws IOException, InterruptedException {
+    public void getNewBussines(ChromeDriver driver) throws IOException, InterruptedException, AWTException {
         NewBusinessVO nbvo = new NewBusinessVO();
         nbvo.setNewBusinessEffectiveDate(ExcelUtils_01.getCellValueByLabel("newBusinessEffectiveDate"));
         nbvo.setNewBusinessState(ExcelUtils_01.getCellValueByLabel("newBusinessState"));
@@ -193,6 +195,26 @@ public class NewBusiness_01 {
         driver.findElement(By.id(ConstantsClass.paymentTypeCode)).sendKeys(nbvo.getNewBusinessPaymentType());
 //        Issue the Bussiness
         driver.findElement(By.xpath(ConstantsClass.process)).click();
+
+        Robot robot = new Robot();
+
+        Thread.sleep(20000);
+
+        robot.keyPress(KeyEvent.VK_CONTROL); // Press CTRL key
+
+//        robot.keyPress(KeyEvent.VK_SHIFT); //press shift
+
+        robot.keyPress(KeyEvent.VK_TAB); // Press tab key
+
+//        Robot robot1 = new Robot();
+
+//        Thread.sleep(20000);
+//
+//        robot1.keyPress(KeyEvent.VK_CONTROL); // Press CTRL key
+//
+//        robot1.keyPress(KeyEvent.VK_SHIFT); //press shift
+//
+//        robot1.keyPress(KeyEvent.VK_TAB); // Press tab key
     }
 
 
