@@ -21,8 +21,8 @@ public class AllTransactions_01 {
         CancellationNotice_05 cn = new CancellationNotice_05();
         cn.getcancellationNotice(driver1);
 
-//        CancellationNotice_05 cn1 = new CancellationNotice_05();
-//        cn1.getcancellationNotice(driver1);
+        CancellationNotice_05 cn1 = new CancellationNotice_05();
+        cn1.getcancellationNotice(driver1);
 
         ChromeDriver driver2 = CommonClass.getchromedriver();
 

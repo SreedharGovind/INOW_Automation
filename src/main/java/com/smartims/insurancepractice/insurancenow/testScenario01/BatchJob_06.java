@@ -18,6 +18,8 @@ public class BatchJob_06 {
         BatchJobVO bjo = new BatchJobVO();
         driver.manage().window().maximize();
         Actions actions = new Actions(driver);
+        driver.findElement(By.id("Tab_Tasks")).click();
+        driver.findElement(By.id("Tab_Tasks")).click();
         WebElement BatchJob = driver.findElement(By.id(Constants_03.operations));
         actions.moveToElement(BatchJob).perform();
         WebElement BatchJob1 = driver.findElement(By.id("Menu_Admin_ChangeDate"));
@@ -26,7 +28,7 @@ public class BatchJob_06 {
         driver.findElement(By.id("ChangeDate")).click();
 
         driver.findElement(By.id(Constants_03.dailyManual)).sendKeys("10/02/2022");
-        driver.findElement(By.id("ChangeBookDate")).click();
+driver.findElement(By.id("ChangeBookDate")).click();
 
         driver.findElement(By.name("Return")).click();
 
