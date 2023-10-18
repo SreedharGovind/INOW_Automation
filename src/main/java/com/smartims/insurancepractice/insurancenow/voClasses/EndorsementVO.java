@@ -1,6 +1,16 @@
 package com.smartims.insurancepractice.insurancenow.voClasses;
 
 public class EndorsementVO {
+    String endorsementTransactionCd;
+
+    public String getEndorsementTransactionCd() {
+        return endorsementTransactionCd;
+    }
+
+    public void setEndorsementTransactionCd(String endorsementTransactionCd) {
+        this.endorsementTransactionCd = endorsementTransactionCd;
+    }
+
     String endorsementEffectiveDate;
     String endorsementState;
     String endorsementProgramType;
@@ -3144,5 +3154,8 @@ public class EndorsementVO {
 
     public void setEndorsementPaymentType(String endorsementPaymentType) {
         this.endorsementPaymentType = endorsementPaymentType;
+    }
+
+    public void setEndorsementDriver1NonDriverType(String endorsementDriver1NonDriverType) {
     }
 }
