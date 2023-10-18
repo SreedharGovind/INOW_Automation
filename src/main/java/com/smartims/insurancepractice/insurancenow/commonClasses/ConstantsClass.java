@@ -286,5 +286,17 @@ public class ConstantsClass {
     public static final String rewriteNewTransactionInfoPaymentTypeCd="TransactionInfo.PaymentTypeCd";
     public static final String rewriteNewProcess="Process";
 
+
+
+    public static final String renewalPolicyNumber="ToolbarSearchText";
+    public static final String renewalToolbarSearch="ToolbarSearch";
+    public static final String renewalTransaction="Transaction";
+    public static final String renewalStartTransaction="TransactionCd";
+    public static final String renewalStartSelect="Select";
+    public static final String renewalStartTransactionLongDescription="TransactionLongDescription";
+    public static final String renewalStart="Start";
+    public static final String renewalStartFinesh="Closeout";
+    public static final String renewalStartProcess="Process";
+
 }
 
