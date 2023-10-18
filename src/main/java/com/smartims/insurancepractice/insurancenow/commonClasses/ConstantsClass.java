@@ -220,5 +220,70 @@ public class ConstantsClass {
     public static final String existingCustomerProgramType = "BasicPolicy.ProgramType";
 
 
+
+    public static final String endorsementToolbarSearchText = "ToolbarSearchText";
+    public static final String endorsementToolbarSearch = "ToolbarSearch";
+    public static final String endorsementTransaction = "/html/body/main/form/div[1]/div/div[2]/div/div[1]/div/div/div/div[4]/a/span";
+    public static final String endorsementTransactionCd = "TransactionCd";
+    public static final String endorsementSelect = "Select";
+    public static final String endorsementTransactionEffectiveDt = "TransactionEffectiveDt";
+    public static final String endorsementStart = "Start";
+    public static final String endorsementNavigate_DriverParty = "Navigate_DriverParty";
+
+    public static final String endorsementDriver1FirstName = "NameInfo.GivenName";
+    public static final String endorsementDriver1LastName = "NameInfo.Surname";
+    public static final String endorsementDriver1RelationshipToInsured = "DriverInfo.RelationshipToInsuredCd";
+    public static final String endorsementDriver1DriverStatus = "DriverInfo.DriverStatusCd";
+    public static final String endorsementDriver1BirthDate = "PersonInfo.BirthDt";
+    public static final String endorsementDriver1Gender = "PersonInfo.GenderCd";
+    public static final String endorsementDriver1MaritalStatus = "PersonInfo.MaritalStatusCd";
+    public static final String endorsementDriver1AgeLicensed = "DriverInfo.LicenseDt";
+    public static final String endorsementDriver1DateLicensed = "DriverInfo.LicenseDt";
+    public static final String endorsementDriver1LicenseState = "DriverInfo.LicensedStateProvCd";
+    public static final String endorsementDriver1LicenseNumber = "DriverInfo.LicenseNumber";
+    public static final String endorsementDriver1DriversLicenseStatus = "DriverInfo.LicenseStatus";
+    public static final String endorsementDriver1SR22 = "DriverInfo.SR22";
+    public static final String endorsementDriver1OccupationStatus = "PersonInfo.OccupationStatus";
+    public static final String endorsementDriver1Address = "ContactAddr.Addr1";
+    public static final String endorsementDriver1City = "ContactAddr.City";
+    public static final String endorsementDriver1State = "ContactAddr.StateProvCd";
+    public static final String endorsementDriver1Zip = "ContactAddr.PostalCode";
+    public static final String endorsementaddrVerifyImg = "ContactAddr.addrVerifyImg";
+    public static final String endorsementSave = "Save";
+    public static final String endorsementVehicle1Add = "Navigate_AddRisk_PrivatePassengerAuto";
+    public static final String endorsementVehicle1VIN = "Vehicle.VehIdentificationNumber";
+    public static final String endorsementValidateVIN = "ValidateVIN";
+    public static final String endorsementVehicle1Use = "Vehicle.VehUseCd";
+    public static final String endorsementVehicle1PurchasedOrLeased = "Vehicle.LeasedVehInd";
+    public static final String endorsementCloseout = "Closeout";
+    public static final String endorsementProcess = "Process";
+    //
+    public static final String resindCancellationToolbarSearchText = "ToolbarSearchText";
+    public static final String resindCancellationToolbarSearch = "ToolbarSearch";
+    public static final String resindCancellationTransaction = "//*[@id=\"Transaction\"]/span";
+    public static final String resindCancellationContextMenuHistoryActions="ContextMenuHistoryActions_1_3";
+    public static final String resindCancellationContextMenuHistoryActionsdropdown="ContextMenuHistoryActions_1_3_Add-dropdown";
+    public static final String resindCancellationRescind="Rescind_1_3";
+    public static final String resindCancellationTransactionLongDescription="TransactionLongDescription";
+    public static final String resindCancellationStart="Start";
+    public static final String resindCancellationProcess="Process";
+//
+
+    public static final String rewriteNewToolbarSearchText = "ToolbarSearchText";
+    public static final String rewriteNewToolbarSearch = "ToolbarSearch";
+    public static final String rewriteNewTransaction = "//*[@id=\"Transaction\"]/span";
+    public static final String rewriteNewTransactionCd = "TransactionCd";
+    public static final String rewriteNewSelect = "Select";
+    public static final String rewriteNewTransactionEffectiveDt = "TransactionEffectiveDt";
+    public static final String rewriteNewStart = "Start";
+    public static final String rewriteNewTransactionLongDescription="TransactionLongDescription";
+    public static final String rewriteNewCloseout="Closeout";
+    public static final String rewriteNewUnderwriting="Wizard_Underwriting";
+    public static final String rewriteNewSave="Save";
+    public static final String rewriteNewReview="Wizard_Review";
+    public static final String rewriteNewWizard_ReviewBasicPolicyPayPlanCd_1="BasicPolicy.PayPlanCd_1";
+    public static final String rewriteNewTransactionInfoPaymentTypeCd="TransactionInfo.PaymentTypeCd";
+    public static final String rewriteNewProcess="Process";
+
 }
 
