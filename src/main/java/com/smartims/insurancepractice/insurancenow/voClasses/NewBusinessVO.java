@@ -1,7 +1,7 @@
 package com.smartims.insurancepractice.insurancenow.voClasses;
 
 public class NewBusinessVO {
-
+    String newBusinessPolicyNumber;
     String newBusinessEffectiveDate;
     String newBusinessState;
     String newBusinessProgramType;
@@ -374,6 +374,14 @@ public class NewBusinessVO {
     String newBusinessAtTRExpirationDate;
     String newBusinessAdditionalDeclarationText;
     String newBusinessIssueNewBusiness;
+
+    public String getNewBusinessPolicyNumber() {
+        return newBusinessPolicyNumber;
+    }
+
+    public void setNewBusinessPolicyNumber(String newBusinessPolicyNumber) {
+        this.newBusinessPolicyNumber = newBusinessPolicyNumber;
+    }
 
     public String getNewBusinessEffectiveDate() {
         return newBusinessEffectiveDate;

@@ -1,6 +1,7 @@
 package com.smartims.insurancepractice.insurancenow.testScenario02;
 
 import com.smartims.insurancepractice.insurancenow.commonClasses.ConstantsClass;
+import com.smartims.insurancepractice.insurancenow.voClasses.NewBusinessVO;
 import com.smartims.insurancepractice.insurancenow.voClasses.RewriteNewVO;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -8,16 +9,21 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 
 public class RewriteNew_02 {
-    void rewriteNew_02(ChromeDriver driver, Actions actions) throws IOException {
+    void rewriteNew_02(ChromeDriver driver, Actions actions) throws IOException, InterruptedException, AWTException {
         RewriteNewVO rnvo = new RewriteNewVO();
+        SeleniumToExcel_02 seleniumToExcel = new SeleniumToExcel_02();
+        NewBusinessVO nvo = new NewBusinessVO();
+        nvo.setNewBusinessPolicyNumber(ExcelUtils_PolicyNumber.getCellValueByLabel("NewBusinessPolicyNumber"));
         rnvo.setRewriteNewPaymentType(ExcelUtils_02.getCellValueByLabel("rewriteNewPaymentType"));
         WebElement policyTab = driver.findElement(By.xpath(ConstantsClass.policySearchTab));
         actions.moveToElement(policyTab).perform();
         policyTab.click();
-        driver.findElement(By.xpath(ConstantsClass.policyNumberTextField)).sendKeys("PA0000024-01");
+        driver.findElement(By.xpath(ConstantsClass.policyNumberTextField)).sendKeys(nvo.getNewBusinessPolicyNumber());
         WebElement searchButton = driver.findElement(By.xpath(ConstantsClass.searchButton));
         actions.moveToElement(searchButton).perform();
         searchButton.click();
@@ -33,6 +39,17 @@ public class RewriteNew_02 {
         driver.findElement(By.id(ConstantsClass.finishButton)).click();
         driver.findElement(By.id(ConstantsClass.paymentTypeCode)).sendKeys(rnvo.getRewriteNewPaymentType());
         driver.findElement(By.xpath(ConstantsClass.process)).click();
+        Robot robot = new Robot();
+        Thread.sleep(20000);
+        robot.keyPress(KeyEvent.VK_CONTROL); // Press CTRL key
+        robot.keyPress(KeyEvent.VK_SHIFT); // press shift
+        robot.keyPress(KeyEvent.VK_TAB); // Press tab key
+        Robot robot1 = new Robot();
+        Thread.sleep(20000);
+        robot1.keyPress(KeyEvent.VK_CONTROL); // Press CTRL key
+        robot1.keyPress(KeyEvent.VK_SHIFT); // press shift
+        robot1.keyPress(KeyEvent.VK_TAB); // Press tab key
+        seleniumToExcel.premium(driver, "RewriteNew Premium");
 
     }
 }
