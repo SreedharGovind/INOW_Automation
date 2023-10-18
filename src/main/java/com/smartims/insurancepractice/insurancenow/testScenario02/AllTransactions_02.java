@@ -4,10 +4,11 @@ import com.smartims.insurancepractice.insurancenow.commonClasses.CommonClass;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
+import java.awt.*;
 import java.io.IOException;
 
 public class AllTransactions_02 {
-    public static void main(String[] args) throws IOException, InterruptedException, IOException {
+    public static void main(String[] args) throws InterruptedException, IOException, AWTException {
         ChromeDriver driver = CommonClass.getchromedriver();
         Actions actions = new Actions(driver);
 
@@ -27,8 +28,8 @@ public class AllTransactions_02 {
         RewriteNew_02 rewrite = new RewriteNew_02();
         rewrite.rewriteNew_02(driver, actions);
 
-//        RewriteNew_02 renewal = new RewriteNew_02();
-//        renewal.rewriteNew_02(driver, actions);
+        RenewalStart_02 renewal = new RenewalStart_02();
+        renewal.renewalStart_02(driver, actions);
 
     }
 }
