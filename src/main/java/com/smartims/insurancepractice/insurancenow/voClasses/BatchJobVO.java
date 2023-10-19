@@ -13,6 +13,15 @@ public class BatchJobVO {
     String batchJobAccountDisplayNumber;
     String batchJobStatementAccountDisplayNumber;
     String batchJobPrinter;
+    String data;
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
 
     public String getBatchJobRunDate() {
         return batchJobRunDate;
