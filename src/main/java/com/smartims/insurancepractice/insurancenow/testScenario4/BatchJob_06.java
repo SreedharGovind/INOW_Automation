@@ -1,7 +1,8 @@
-package com.smartims.insurancepractice.insurancenow.testScenario01;
+package com.smartims.insurancepractice.insurancenow.testScenario4;
 
 
 import com.smartims.insurancepractice.insurancenow.commonClasses.ConstantsClass;
+import com.smartims.insurancepractice.insurancenow.testScenario01.Constants_03;
 import com.smartims.insurancepractice.insurancenow.voClasses.BatchJobVO;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -14,10 +15,13 @@ public class BatchJob_06 {
         BatchJobVO bjo = new BatchJobVO();
         driver.manage().window().maximize();
         Actions actions = new Actions(driver);
+        Thread.sleep(2000);
         WebElement number  = driver.findElement(By.id("PolicySummary_PolicyNumber"));
         String policynumber  = number.getText();
+        System.out.println(number);
         bjo.setData(policynumber);
         driver.findElement(By.id("Tab_Tasks")).click();
+
         WebElement dataElement = driver.findElement(By.id("Task_WorkDt_3"));
         String data = dataElement.getText();
         bjo.setData(data);
@@ -49,7 +53,6 @@ public class BatchJob_06 {
         policyTab2.click();
 
         driver.findElement(By.xpath(ConstantsClass.policyNumberTextField)).sendKeys(bjo.getPolicyNumber());
-
         WebElement searchButton2 = driver.findElement(By.xpath(ConstantsClass.searchButton));
         actions.moveToElement(searchButton2).perform();
         searchButton2.click();
