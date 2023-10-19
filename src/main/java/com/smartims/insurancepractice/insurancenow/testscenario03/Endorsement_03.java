@@ -84,8 +84,6 @@ public class Endorsement_03 {
         robot.keyPress(KeyEvent.VK_SHIFT); //press shift
         robot.keyPress(KeyEvent.VK_TAB); // Press tab key
         se.premium(driver, "EndorsementPremium");
-
-
     }
 }
 

@@ -1,5 +1,4 @@
-package com.smartims.insurancepractice.insurancenow.testscenario03;
-
+package com.smartims.insurancepractice.insurancenow.testScenario02;
 
 import org.apache.poi.ss.usermodel.*;
 
@@ -7,13 +6,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-public class ExcelUtils_03 {
-
+public class ExcelUtils_PolicyNumber {
     public static String getCellValueByLabel(String label) throws IOException {
-        // Create a new Excel workbook and sheet
-        String filepath = "INOW Automation Data Sheet.xlsx";
-        FileInputStream file = new FileInputStream(new File(filepath));
-        String sheetName = "TS_01";
+        String excelFilePath = "D:\\QA Automation Git\\INowUpdatedDataSheet.xlsx";
+        FileInputStream file = new FileInputStream(new File(excelFilePath));
+        String sheetName = "PolicyNumber&Premium";
         Workbook workbook = WorkbookFactory.create(file);
         Sheet sheet = workbook.getSheet(sheetName);
         try {
@@ -23,7 +20,6 @@ public class ExcelUtils_03 {
                         String value = row.getCell(cell.getColumnIndex() + 1).getStringCellValue();
                         workbook.close();
                         return value;
-
                     }
                 }
             }
@@ -35,4 +31,3 @@ public class ExcelUtils_03 {
         return null;
     }
 }
-

@@ -1,24 +1,26 @@
 package com.smartims.insurancepractice.insurancenow.testScenario02;
 
 import com.smartims.insurancepractice.insurancenow.commonClasses.ConstantsClass;
-import com.smartims.insurancepractice.insurancenow.commonClasses.ExcelUtilsCredentials;
-import com.smartims.insurancepractice.insurancenow.voClasses.CredentialsVO;
 import com.smartims.insurancepractice.insurancenow.voClasses.EndorsementVO;
+import com.smartims.insurancepractice.insurancenow.voClasses.NewBusinessVO;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
-import java.time.Duration;
 
 public class Endorsement_02 {
-    	void endorsement_02(ChromeDriver driver, Actions actions) throws IOException {
+    void endorsement_02(ChromeDriver driver, Actions actions) throws IOException, InterruptedException, AWTException {
 
+        SeleniumToExcel_02 seleniumToExcel = new SeleniumToExcel_02();
+        NewBusinessVO nvo = new NewBusinessVO();
         EndorsementVO evo = new EndorsementVO();
+        nvo.setNewBusinessPolicyNumber(ExcelUtils_PolicyNumber.getCellValueByLabel("NewBusinessPolicyNumber"));
         evo.setEndorsementEffectiveDate(ExcelUtils_02.getCellValueByLabel("endorsementEffectiveDate"));
         evo.setEndorsementEntityType(ExcelUtils_02.getCellValueByLabel("endorsementEntityType"));
         evo.setEndorsementIndividualSuffix(ExcelUtils_02.getCellValueByLabel("endorsementIndividualSuffix"));
@@ -40,7 +42,7 @@ public class Endorsement_02 {
         WebElement policyTab = driver.findElement(By.xpath(ConstantsClass.policySearchTab));
         actions.moveToElement(policyTab).perform();
         policyTab.click();
-        driver.findElement(By.xpath(ConstantsClass.policyNumberTextField)).sendKeys("PA0000025-01");
+        driver.findElement(By.xpath(ConstantsClass.policyNumberTextField)).sendKeys(nvo.getNewBusinessPolicyNumber());
         WebElement searchButton = driver.findElement(By.xpath(ConstantsClass.searchButton));
         actions.moveToElement(searchButton).perform();
         searchButton.click();
@@ -89,7 +91,7 @@ public class Endorsement_02 {
             driver.findElement(By.id(ConstantsClass.newBusinessVehicle1CollisionDeductible))
                     .sendKeys(evo.getEndorsementVehicle1CollisionDeductible());
         }
-        boolean additionalInterest = evo.getEndorsementVehicle1CollisionDeductible().isBlank();
+        boolean additionalInterest = evo.getEndorsementAICode().isBlank();
         if (additionalInterest) {
         } else {
             driver.findElement(By.id(ConstantsClass.wizardAdditionalInterests)).click();
@@ -103,6 +105,12 @@ public class Endorsement_02 {
             driver.findElement(By.id(ConstantsClass.saveButton)).click();
             driver.findElement(By.id(ConstantsClass.finishButton)).click();
             driver.findElement(By.xpath(ConstantsClass.completeEndorsementTransactionButton)).click();
+            Robot robot = new Robot();
+            Thread.sleep(20000);
+            robot.keyPress(KeyEvent.VK_CONTROL); // Press CTRL key
+            robot.keyPress(KeyEvent.VK_SHIFT); // press shift
+            robot.keyPress(KeyEvent.VK_TAB); // Press tab key
+            seleniumToExcel.premium(driver, "Endorsement Premium");
 
         }
     }

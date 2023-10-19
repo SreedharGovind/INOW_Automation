@@ -20,8 +20,7 @@ public class AllTransactions_03 {
         RewriteNew_03 rn = new RewriteNew_03();
         rn.getRewriteNew(driver);
 
-
+        RenewalStart_03 rs = new RenewalStart_03();
+        rs.getRenewalStart(driver);
     }
-
-
 }

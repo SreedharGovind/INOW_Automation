@@ -2,6 +2,7 @@ package com.smartims.insurancepractice.insurancenow.testScenario02;
 
 import com.smartims.insurancepractice.insurancenow.commonClasses.ConstantsClass;
 import com.smartims.insurancepractice.insurancenow.voClasses.CancellationVO;
+import com.smartims.insurancepractice.insurancenow.voClasses.NewBusinessVO;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,6 +14,10 @@ import java.io.IOException;
 public class Cancellation_02 {
     void cancellation_02(ChromeDriver driver, Actions actions) throws IOException {
         CancellationVO cancelVO = new CancellationVO();
+        SeleniumToExcel_02 seleniumToExcel = new SeleniumToExcel_02();
+        NewBusinessVO nvo = new NewBusinessVO();
+        nvo.setNewBusinessPolicyNumber(ExcelUtils_PolicyNumber.getCellValueByLabel("NewBusinessPolicyNumber"));
+
         cancelVO.setCancellationNoticeDate(ExcelUtils_02.getCellValueByLabel("cancellationNoticeDate"));
         cancelVO.setCancellationCancellationType(ExcelUtils_02.getCellValueByLabel("cancellationCancellationType"));
         cancelVO.setCancellationReason(ExcelUtils_02.getCellValueByLabel("cancellationReason"));
@@ -20,10 +25,11 @@ public class Cancellation_02 {
         cancelVO.setCancellationType(ExcelUtils_02.getCellValueByLabel("cancellationType"));
         cancelVO.setCancellationAdditionalNoticeText(
                 ExcelUtils_02.getCellValueByLabel("cancellationAdditionalNoticeText"));
+
         WebElement policyTab = driver.findElement(By.xpath(ConstantsClass.policySearchTab));
         actions.moveToElement(policyTab).perform();
         policyTab.click();
-        driver.findElement(By.xpath(ConstantsClass.policyNumberTextField)).sendKeys("PA0000023-01");
+        driver.findElement(By.xpath(ConstantsClass.policyNumberTextField)).sendKeys(nvo.getNewBusinessPolicyNumber());
         WebElement searchButton = driver.findElement(By.xpath(ConstantsClass.searchButton));
         actions.moveToElement(searchButton).perform();
         searchButton.click();
@@ -43,6 +49,6 @@ public class Cancellation_02 {
                 .sendKeys(cancelVO.getCancellationAdditionalNoticeText());
         driver.findElement(By.xpath(ConstantsClass.startButton)).click();
         driver.findElement(By.xpath(ConstantsClass.processButton)).click();
-
+        seleniumToExcel.premium(driver, "Cancellation Premium");
     }
 }

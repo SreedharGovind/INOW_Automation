@@ -9,11 +9,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 
 public class NewBusiness_02 {
-    void newBusiness_02(ChromeDriver driver, Actions actions) throws IOException, InterruptedException {
+    void newBusiness_02(ChromeDriver driver, Actions actions) throws IOException, InterruptedException, AWTException {
         NewBusinessVO nvo = new NewBusinessVO();
+        SeleniumToExcel_02 seleniumToExcel = new SeleniumToExcel_02();
 
         nvo.setNewBusinessEffectiveDate(ExcelUtils_02.getCellValueByLabel("newBusinessEffectiveDate"));
         nvo.setNewBusinessState(ExcelUtils_02.getCellValueByLabel("newBusinessState"));
@@ -314,6 +317,7 @@ public class NewBusiness_02 {
             driver.findElement(By.id(ConstantsClass.newBusinessVehicle1SpecialEquipment))
                     .sendKeys(nvo.getNewBusinessVehicle2SpecialEquipment());
             driver.findElement(By.id(ConstantsClass.saveButton)).click();
+            driver.findElement(By.xpath(ConstantsClass.newBusinessCreateApplicationButton)).click();
         }
         boolean additionalInterest = nvo.getNewBusinessAICode().isBlank();
         if (additionalInterest) {
@@ -360,6 +364,12 @@ public class NewBusiness_02 {
         System.out.println(nvo.getNewBusinessPaymentType());
         driver.findElement(By.id(ConstantsClass.paymentTypeCode)).sendKeys(nvo.getNewBusinessPaymentType());
         driver.findElement(By.xpath(ConstantsClass.process)).click();
+        Robot robot = new Robot();
+        Thread.sleep(30000);
+        robot.keyPress(KeyEvent.VK_CONTROL); // Press CTRL key
+        robot.keyPress(KeyEvent.VK_TAB); // Press Tab key
+        seleniumToExcel.premium(driver, "NewBusinessPolicyNumber");
+        seleniumToExcel.premium(driver, "NewBusiness Premium");
 
     }
 }
