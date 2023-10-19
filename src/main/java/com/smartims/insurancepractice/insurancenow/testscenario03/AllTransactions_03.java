@@ -22,9 +22,5 @@ public class AllTransactions_03 {
 
         RenewalStart_03 rs = new RenewalStart_03();
         rs.getRenewalStart(driver);
-
-
     }
-
-
 }
