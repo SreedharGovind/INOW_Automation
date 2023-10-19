@@ -13,7 +13,6 @@ import java.io.IOException;
 
 public class SeleniumToExcel_03 {
     static int currentColumnIndex = 0;
-
     WebElement premiumValue(ChromeDriver driver, String transaction) {
 
         if (transaction.equals("NewBusinessPremium")) {
@@ -36,14 +35,11 @@ public class SeleniumToExcel_03 {
         }
         return null;
     }
-
     public void premium(ChromeDriver driver, String transaction) throws IOException {
-
         FileInputStream fis = new FileInputStream(new File("INOW Automation Data Sheet.xlsx"));
         Workbook workbook = new XSSFWorkbook(fis);
         String SheetName="PremiumValues";
         Sheet sheet = workbook.getSheet(SheetName);
-
         WebElement data = this.premiumValue(driver, transaction);
         String capturedData = data.getText();
         for (Row row : sheet) {
@@ -58,10 +54,8 @@ public class SeleniumToExcel_03 {
                 }
             }
         }
-
         FileOutputStream fos = new FileOutputStream(new File("INOW Automation Data Sheet.xlsx"));
         workbook.write(fos);
         fos.close();
-
     }
 }
