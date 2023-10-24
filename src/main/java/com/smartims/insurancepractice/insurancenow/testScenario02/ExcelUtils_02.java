@@ -8,9 +8,9 @@ import java.io.IOException;
 
 public class ExcelUtils_02 {
     public static String getCellValueByLabel(String label) throws IOException {
-        String excelFilePath = "D:\\QA Automation Git\\INowUpdatedDataSheet.xlsx";
+        String excelFilePath = "INOW Automation Data Sheet.xlsx";
         FileInputStream file = new FileInputStream(new File(excelFilePath));
-        String sheetName = "TS02";
+        String sheetName = "TS_02";
         Workbook workbook = WorkbookFactory.create(file);
         Sheet sheet = workbook.getSheet(sheetName);
         try {

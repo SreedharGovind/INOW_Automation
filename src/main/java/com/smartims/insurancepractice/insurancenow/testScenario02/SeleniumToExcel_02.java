@@ -38,7 +38,7 @@ public class SeleniumToExcel_02 {
 
     public void premium(ChromeDriver driver, String transaction) throws IOException {
 
-        FileInputStream fis = new FileInputStream(new File("D:\\QA Automation Git\\INowUpdatedDataSheet.xlsx"));
+        FileInputStream fis = new FileInputStream(new File("INOW Automation Data Sheet.xlsx"));
         Workbook workbook = new XSSFWorkbook(fis);
         Sheet sheet = workbook.getSheet("PolicyNumber&Premium");
         WebElement data = this.premiumValue(driver, transaction);
@@ -57,7 +57,7 @@ public class SeleniumToExcel_02 {
             }
         }
 
-        FileOutputStream fos = new FileOutputStream(new File("D:\\QA Automation Git\\INowUpdatedDataSheet.xlsx"));
+        FileOutputStream fos = new FileOutputStream(new File("INOW Automation Data Sheet.xlsx"));
         workbook.write(fos);
         fos.close();
 

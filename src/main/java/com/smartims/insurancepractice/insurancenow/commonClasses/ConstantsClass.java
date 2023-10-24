@@ -174,7 +174,8 @@ public class ConstantsClass {
     public static final String endorsementAICode = "AI.InterestCd";
     public static final String newBusinessAICode = "AI.InterestCd";
     public static final String additionalInterestTypeCode = "AI.InterestTypeCd";
-    public static final String saveButton = "//*[@id=\"Save\"]/span";
+//    public static final String saveButton = "//*[@id=\"Save\"]/span";
+    public static final String saveButton = "Save";
     public static final String finishButton = "Closeout";
     public static final String aIDetailLookup = "AIDetail_Lookup";
     public static final String search = "Search";
