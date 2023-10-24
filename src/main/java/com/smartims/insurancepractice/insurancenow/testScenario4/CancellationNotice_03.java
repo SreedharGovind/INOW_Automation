@@ -1,4 +1,4 @@
-package com.smartims.insurancepractice.insurancenow.testscenario03;
+package com.smartims.insurancepractice.insurancenow.testScenario4;
 
 import com.smartims.insurancepractice.insurancenow.testScenario01.Constants_03;
 import com.smartims.insurancepractice.insurancenow.voClasses.CancellationNoticeVO;
@@ -24,6 +24,14 @@ public class CancellationNotice_03 {
         cno.setCancellationNoticeStartTransaction(ExcelUtils_03.getCellValueByLabel("cancellationNoticeStartTransaction"));
         cno.setCancellationNoticeEffectiveDate(ExcelUtils_03.getCellValueByLabel("cancellationNoticeEffectiveDate"));
         cno.setCancellationNoticeDescription(ExcelUtils_03.getCellValueByLabel("cancellationNoticeDescription"));
+
+//        WebElement policyTab = driver.findElement(By.xpath(Constants_03.policySearchTab));
+//        actions.moveToElement(policyTab).perform();
+//        policyTab.click();
+//        driver.findElement(By.xpath(Constants_03.policyNumberTextField)).sendKeys("PA0000073-01");
+//        WebElement searchButton = driver.findElement(By.xpath(Constants_03.searchButton));
+//        actions.moveToElement(searchButton).perform();
+//        searchButton.click();
         driver.findElement(By.xpath(Constants_03.startTransactionButton)).click();
         Select transaction = new Select(driver.findElement(By.xpath(Constants_03.startNewTransaction)));
         transaction.selectByValue("Cancellation Notice");

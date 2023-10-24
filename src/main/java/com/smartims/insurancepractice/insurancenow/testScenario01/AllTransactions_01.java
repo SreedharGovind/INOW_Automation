@@ -9,14 +9,13 @@ public class AllTransactions_01 {
     public static void main(String[] args) throws Exception {
     ChromeDriver driver = CommonClass.getchromedriver();
 
-
 //
         NewBusiness_01 nb = new NewBusiness_01();
         nb.getNewBussines(driver);
-        //Thread.sleep(10000);
-        ChromeDriver driver1 = CommonClass.getchromedriver();
-  BatchJob_06 b = new BatchJob_06();
-        b.batchJob(driver1);
+        Thread.sleep(10000);
+//        ChromeDriver driver1 = CommonClass.getchromedriver();
+//  BatchJob_06 b = new BatchJob_06();
+//        b.batchJob(driver1);
 //        ChromeDriver driver1 = CommonClass.getchromedriver();
 //
 //        CancellationNotice_05 cn = new CancellationNotice_05();
