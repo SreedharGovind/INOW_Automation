@@ -1,4 +1,4 @@
-package com.smartims.insurancepractice.insurancenow.testscenario03;
+package com.smartims.insurancepractice.insurancenow.testscenario01;
 
 import com.smartims.insurancepractice.insurancenow.commonClasses.ConstantsClass;
 import com.smartims.insurancepractice.insurancenow.testScenario01.ExcelUtils_01;
@@ -12,7 +12,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import java.io.IOException;
 
-public class NewBusiness_NewCustomer_03 {
+public class NewBusiness_NewCustomer_01 {
     public void getNewBusiness_ExistingCustomer(ChromeDriver driver) throws InterruptedException, IOException {
         Actions action = new Actions(driver);
         NewBusinessVO nbvo = new NewBusinessVO();

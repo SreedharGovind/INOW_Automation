@@ -1,4 +1,4 @@
-package com.smartims.insurancepractice.insurancenow.testscenario03;
+package com.smartims.insurancepractice.insurancenow.testscenario01;
 
 import com.smartims.insurancepractice.insurancenow.commonClasses.ConstantsClass;
 import com.smartims.insurancepractice.insurancenow.voClasses.RenewalStartVO;
@@ -8,10 +8,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.awt.*;
 import java.io.IOException;
 
-public class RenewalStart_03 {
+public class RenewalStart_01 {
     public void getRenewalStart(ChromeDriver driver) throws IOException, InterruptedException, AWTException {
         RenewalStartVO rsvo = new RenewalStartVO();
-        SeleniumToExcel_03 se = new SeleniumToExcel_03();
+        SeleniumToExcel_01 se = new SeleniumToExcel_01();
 //        rsvo.setRenewalPolicyNumber(ExcelUtils_05.getCellValueByLabel("renewalPolicyNumber"));
 //        rsvo.setRenewalStartDescription(ExcelUtils_05.getCellValueByLabel("renewalStartDescription"));
 //        driver.findElement(By.id(ConstantsClass.renewalPolicyNumber)).sendKeys("PA0000013-01");

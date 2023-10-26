@@ -1,4 +1,4 @@
-package com.smartims.insurancepractice.insurancenow.testscenario03;
+package com.smartims.insurancepractice.insurancenow.testscenario01;
 
 import com.smartims.insurancepractice.insurancenow.commonClasses.ConstantsClass;
 import com.smartims.insurancepractice.insurancenow.voClasses.RewriteNewVO;
@@ -10,13 +10,13 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 
-public class RewriteNew_03 {
+public class RewriteNew_01 {
     void getRewriteNew(ChromeDriver driver) throws IOException, InterruptedException, AWTException {
         Actions actions = new Actions(driver);
         RewriteNewVO rw = new RewriteNewVO();
-        rw.setRewriteNewEffectiveDate(ExcelUtils_03.getCellValueByLabel("rewriteNewEffectiveDate"));
-        rw.setRewriteNewPaymentType(ExcelUtils_03.getCellValueByLabel("rewriteNewPaymentType"));
-        SeleniumToExcel_03 se = new SeleniumToExcel_03();
+        rw.setRewriteNewEffectiveDate(ExcelUtils_01.getCellValueByLabel("rewriteNewEffectiveDate"));
+        rw.setRewriteNewPaymentType(ExcelUtils_01.getCellValueByLabel("rewriteNewPaymentType"));
+        SeleniumToExcel_01 se = new SeleniumToExcel_01();
 //        driver.findElement(By.id(ConstantsClass.rewriteNewToolbarSearchText)).sendKeys("PA0000051-01");
 //        driver.findElement(By.id(ConstantsClass.rewriteNewToolbarSearch)).click();
         driver.findElement(By.xpath(ConstantsClass.rewriteNewTransaction)).click();

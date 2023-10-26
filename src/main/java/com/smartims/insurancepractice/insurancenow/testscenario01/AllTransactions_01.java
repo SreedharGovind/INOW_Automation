@@ -1,26 +1,27 @@
-package com.smartims.insurancepractice.insurancenow.testscenario03;
+package com.smartims.insurancepractice.insurancenow.testscenario01;
 
 
 import com.smartims.insurancepractice.insurancenow.commonClasses.CommonClass;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
-public class AllTransactions_03 {
+public class AllTransactions_01 {
     public static void main(String[] args) throws Exception {
         ChromeDriver driver = CommonClass.getchromedriver();
-        NewBusiness_03 nb = new NewBusiness_03();
+
+        NewBusiness_01 nb = new NewBusiness_01();
         nb.getNewBussines(driver);
 
-        Endorsement_03 ed = new Endorsement_03();
+        Endorsement_01 ed = new Endorsement_01();
         ed.getEndorsement_03(driver);
 
-        CancellationNotice_03 cn = new CancellationNotice_03();
+        CancellationNotice_01 cn = new CancellationNotice_01();
         cn.getcancellationNotice(driver);
 
-        RewriteNew_03 rn = new RewriteNew_03();
+        RewriteNew_01 rn = new RewriteNew_01();
         rn.getRewriteNew(driver);
 
-        RenewalStart_03 rs = new RenewalStart_03();
+        RenewalStart_01 rs = new RenewalStart_01();
         rs.getRenewalStart(driver);
     }
 }
