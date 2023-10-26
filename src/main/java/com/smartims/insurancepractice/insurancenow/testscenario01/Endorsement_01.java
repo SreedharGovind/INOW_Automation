@@ -1,4 +1,4 @@
-package com.smartims.insurancepractice.insurancenow.testscenario03;
+package com.smartims.insurancepractice.insurancenow.testscenario01;
 
 import com.smartims.insurancepractice.insurancenow.commonClasses.ConstantsClass;
 import com.smartims.insurancepractice.insurancenow.voClasses.EndorsementVO;
@@ -10,34 +10,34 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 
-public class Endorsement_03 {
+public class Endorsement_01 {
     void getEndorsement_03(ChromeDriver driver) throws IOException, InterruptedException, AWTException {
         Actions actions = new Actions(driver);
         EndorsementVO evo = new EndorsementVO();
-        SeleniumToExcel_03 se = new SeleniumToExcel_03();
-        evo.setEndorsementTransactionCd(ExcelUtils_03.getCellValueByLabel("endorsementTransactionCd"));
-        evo.setEndorsementEffectiveDate(ExcelUtils_03.getCellValueByLabel("endorsementEffectiveDate"));
-        evo.setEndorsementDriver1FirstName(ExcelUtils_03.getCellValueByLabel("endorsementDriver1FirstName"));
-        evo.setEndorsementDriver1LastName(ExcelUtils_03.getCellValueByLabel("endorsementDriver1LastName"));
-        evo.setEndorsementDriver1RelationshipToInsured(ExcelUtils_03.getCellValueByLabel("endorsementDriver1RelationshipToInsured"));
-        evo.setEndorsementDriver1DriverStatus(ExcelUtils_03.getCellValueByLabel("endorsementDriver1DriverStatus"));
-        evo.setEndorsementDriver1BirthDate(ExcelUtils_03.getCellValueByLabel("endorsementDriver1BirthDate"));
-        evo.setEndorsementDriver1Gender(ExcelUtils_03.getCellValueByLabel("endorsementDriver1Gender"));
-        evo.setEndorsementDriver1MaritalStatus(ExcelUtils_03.getCellValueByLabel("endorsementDriver1MaritalStatus"));
-        evo.setEndorsementDriver1AgeLicensed(ExcelUtils_03.getCellValueByLabel("endorsementDriver1AgeLicensed"));
-        evo.setEndorsementDriver1DateLicensed(ExcelUtils_03.getCellValueByLabel("endorsementDriver1DateLicensed"));
-        evo.setEndorsementDriver1LicenseState(ExcelUtils_03.getCellValueByLabel("endorsementDriver1LicenseState"));
-        evo.setEndorsementDriver1LicenseNumber(ExcelUtils_03.getCellValueByLabel("endorsementDriver1LicenseNumber"));
-        evo.setEndorsementDriver1DriversLicenseStatus(ExcelUtils_03.getCellValueByLabel("endorsementDriver1DriversLicenseStatus"));
-        evo.setEndorsementDriver1SR22(ExcelUtils_03.getCellValueByLabel("endorsementDriver1SR22"));
-        evo.setEndorsementDriver1OccupationStatus(ExcelUtils_03.getCellValueByLabel("endorsementDriver1OccupationStatus"));
-        evo.setEndorsementDriver1Address(ExcelUtils_03.getCellValueByLabel("endorsementDriver1Address"));
-        evo.setEndorsementDriver1City(ExcelUtils_03.getCellValueByLabel("endorsementDriver1City"));
-        evo.setEndorsementDriver1State(ExcelUtils_03.getCellValueByLabel("endorsementDriver1State"));
-        evo.setEndorsementDriver1Zip(ExcelUtils_03.getCellValueByLabel("endorsementDriver1Zip"));
-        evo.setEndorsementVehicle1VIN(ExcelUtils_03.getCellValueByLabel("endorsementVehicle1VIN"));
-        evo.setEndorsementVehicle1Use(ExcelUtils_03.getCellValueByLabel("endorsementVehicle1Use"));
-        evo.setEndorsementVehicle1PurchasedOrLeased(ExcelUtils_03.getCellValueByLabel("endorsementVehicle1PurchasedOrLeased"));
+        SeleniumToExcel_01 se = new SeleniumToExcel_01();
+        evo.setEndorsementTransactionCd(ExcelUtils_01.getCellValueByLabel("endorsementTransactionCd"));
+        evo.setEndorsementEffectiveDate(ExcelUtils_01.getCellValueByLabel("endorsementEffectiveDate"));
+        evo.setEndorsementDriver1FirstName(ExcelUtils_01.getCellValueByLabel("endorsementDriver1FirstName"));
+        evo.setEndorsementDriver1LastName(ExcelUtils_01.getCellValueByLabel("endorsementDriver1LastName"));
+        evo.setEndorsementDriver1RelationshipToInsured(ExcelUtils_01.getCellValueByLabel("endorsementDriver1RelationshipToInsured"));
+        evo.setEndorsementDriver1DriverStatus(ExcelUtils_01.getCellValueByLabel("endorsementDriver1DriverStatus"));
+        evo.setEndorsementDriver1BirthDate(ExcelUtils_01.getCellValueByLabel("endorsementDriver1BirthDate"));
+        evo.setEndorsementDriver1Gender(ExcelUtils_01.getCellValueByLabel("endorsementDriver1Gender"));
+        evo.setEndorsementDriver1MaritalStatus(ExcelUtils_01.getCellValueByLabel("endorsementDriver1MaritalStatus"));
+        evo.setEndorsementDriver1AgeLicensed(ExcelUtils_01.getCellValueByLabel("endorsementDriver1AgeLicensed"));
+        evo.setEndorsementDriver1DateLicensed(ExcelUtils_01.getCellValueByLabel("endorsementDriver1DateLicensed"));
+        evo.setEndorsementDriver1LicenseState(ExcelUtils_01.getCellValueByLabel("endorsementDriver1LicenseState"));
+        evo.setEndorsementDriver1LicenseNumber(ExcelUtils_01.getCellValueByLabel("endorsementDriver1LicenseNumber"));
+        evo.setEndorsementDriver1DriversLicenseStatus(ExcelUtils_01.getCellValueByLabel("endorsementDriver1DriversLicenseStatus"));
+        evo.setEndorsementDriver1SR22(ExcelUtils_01.getCellValueByLabel("endorsementDriver1SR22"));
+        evo.setEndorsementDriver1OccupationStatus(ExcelUtils_01.getCellValueByLabel("endorsementDriver1OccupationStatus"));
+        evo.setEndorsementDriver1Address(ExcelUtils_01.getCellValueByLabel("endorsementDriver1Address"));
+        evo.setEndorsementDriver1City(ExcelUtils_01.getCellValueByLabel("endorsementDriver1City"));
+        evo.setEndorsementDriver1State(ExcelUtils_01.getCellValueByLabel("endorsementDriver1State"));
+        evo.setEndorsementDriver1Zip(ExcelUtils_01.getCellValueByLabel("endorsementDriver1Zip"));
+        evo.setEndorsementVehicle1VIN(ExcelUtils_01.getCellValueByLabel("endorsementVehicle1VIN"));
+        evo.setEndorsementVehicle1Use(ExcelUtils_01.getCellValueByLabel("endorsementVehicle1Use"));
+        evo.setEndorsementVehicle1PurchasedOrLeased(ExcelUtils_01.getCellValueByLabel("endorsementVehicle1PurchasedOrLeased"));
         Thread.sleep(10000);
 //        driver.findElement(By.id(ConstantsClass.endorsementToolbarSearchText)).sendKeys((policyNumber));
 //        driver.findElement(By.id(ConstantsClass.endorsementToolbarSearch)).click();

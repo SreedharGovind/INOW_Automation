@@ -1,6 +1,6 @@
-package com.smartims.insurancepractice.insurancenow.testScenario01;
+package com.smartims.insurancepractice.insurancenow.testscenario01;
 
-import com.smartims.insurancepractice.insurancenow.commonClasses.ConstantsClass;
+import com.smartims.insurancepractice.insurancenow.testScenario01.Constants_03;
 import com.smartims.insurancepractice.insurancenow.voClasses.CancellationNoticeVO;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.Select;
 import java.io.IOException;
 import java.time.Duration;
 
-public class CancellationNotice_05 {
+public class CancellationNotice_01 {
     public void getcancellationNotice(ChromeDriver driver) throws IOException, InterruptedException {
         Actions actions = new Actions(driver);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -24,14 +24,6 @@ public class CancellationNotice_05 {
         cno.setCancellationNoticeStartTransaction(ExcelUtils_01.getCellValueByLabel("cancellationNoticeStartTransaction"));
         cno.setCancellationNoticeEffectiveDate(ExcelUtils_01.getCellValueByLabel("cancellationNoticeEffectiveDate"));
         cno.setCancellationNoticeDescription(ExcelUtils_01.getCellValueByLabel("cancellationNoticeDescription"));
-
-        WebElement policyTab = driver.findElement(By.xpath(Constants_03.policySearchTab));
-        actions.moveToElement(policyTab).perform();
-        policyTab.click();
-        driver.findElement(By.xpath(Constants_03.policyNumberTextField)).sendKeys("PA0000073-01");
-        WebElement searchButton = driver.findElement(By.xpath(Constants_03.searchButton));
-        actions.moveToElement(searchButton).perform();
-        searchButton.click();
         driver.findElement(By.xpath(Constants_03.startTransactionButton)).click();
         Select transaction = new Select(driver.findElement(By.xpath(Constants_03.startNewTransaction)));
         transaction.selectByValue("Cancellation Notice");
@@ -48,11 +40,11 @@ public class CancellationNotice_05 {
         driver.findElement(By.xpath(Constants_03.startButton)).click();
         driver.findElement(By.xpath(Constants_03.processButton)).click();
         Thread.sleep(2000);
-        driver.findElement(By.id("ContextMenuHistoryActions_1_2")).click();
+        driver.findElement(By.id("ContextMenuHistoryActions_1_3")).click();
 // driver.findElement(By.id("ContextMenuHistoryActions_1_3")).click();
-        WebElement select = driver.findElement(By.id("ContextMenuHistoryActions_1_2"));
+        WebElement select = driver.findElement(By.id("ContextMenuHistoryActions_1_3"));
         actions.moveToElement(select).perform();
-        driver.findElement(By.id("NoticeCancel_1_2")).click();
+        driver.findElement(By.id("NoticeCancel_1_3")).click();
         driver.findElement(By.id("TransactionLongDescription")).sendKeys("Text");
         driver.findElement(By.id("Start")).click();
         driver.findElement(By.id("Process")).click();

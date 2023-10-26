@@ -1,4 +1,4 @@
-package com.smartims.insurancepractice.insurancenow.testscenario03;
+package com.smartims.insurancepractice.insurancenow.testscenario01;
 
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -11,7 +11,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class SeleniumToExcel_03 {
+public class SeleniumToExcel_01 {
     static int currentColumnIndex = 0;
     WebElement premiumValue(ChromeDriver driver, String transaction) {
 
