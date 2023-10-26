@@ -1,6 +1,8 @@
 
-package com.smartims.insurancepractice.insurancenow.testScenario01;
+package com.smartims.insurancepractice.insurancenow.testScenario4;
 
+import com.smartims.insurancepractice.insurancenow.testScenario01.Constants_03;
+import com.smartims.insurancepractice.insurancenow.testScenario01.ExcelUtils_01;
 import com.smartims.insurancepractice.insurancenow.voClasses.ReinstatementVO;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -10,7 +12,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import java.io.IOException;
 
-public class Reinstatement_01 {
+public class Reinstatement_03 {
      public  void getReinstatement(ChromeDriver driver) throws  IOException,InterruptedException{
          Actions actions = new Actions(driver);
          ReinstatementVO rvo = new ReinstatementVO();

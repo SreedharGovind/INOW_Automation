@@ -1,4 +1,4 @@
-package com.smartims.insurancepractice.insurancenow.testScenario01;
+package com.smartims.insurancepractice.insurancenow.testScenario4;
 import com.smartims.insurancepractice.insurancenow.commonClasses.ConstantsClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -7,7 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import java.io.IOException;
-public class Cancellation_04 {
+public class Cancellation_03 {
       public void getcancellation(ChromeDriver driver) throws IOException, InterruptedException {
             Actions actions = new Actions(driver);
 

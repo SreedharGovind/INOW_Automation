@@ -1,4 +1,4 @@
-package com.smartims.insurancepractice.insurancenow.testscenario03;
+package com.smartims.insurancepractice.insurancenow.testScenario4;
 
 import com.smartims.insurancepractice.insurancenow.commonClasses.ConstantsClass;
 import com.smartims.insurancepractice.insurancenow.voClasses.RewriteNewVO;
@@ -45,5 +45,7 @@ public class RewriteNew_03 {
         robot1.keyPress(KeyEvent.VK_SHIFT); //press shift
         robot1.keyPress(KeyEvent.VK_TAB); // Press tab key
         se.premium(driver, "RewriteNewPremium");
+
+
     }
 }

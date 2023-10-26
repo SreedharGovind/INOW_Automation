@@ -1,4 +1,4 @@
-package com.smartims.insurancepractice.insurancenow.testscenario03;
+package com.smartims.insurancepractice.insurancenow.testscenario01;
 
 
 import org.apache.poi.ss.usermodel.*;
@@ -7,7 +7,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-public class ExcelUtils_03 {
+public class ExcelUtils_01 {
 
     public static String getCellValueByLabel(String label) throws IOException {
         // Create a new Excel workbook and sheet

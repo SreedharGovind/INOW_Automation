@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class ExcelUtils_PolicyNumber {
     public static String getCellValueByLabel(String label) throws IOException {
-        String excelFilePath = "D:\\QA Automation Git\\INowUpdatedDataSheet.xlsx";
+        String excelFilePath = "INOW Automation Data Sheet.xlsx";
         FileInputStream file = new FileInputStream(new File(excelFilePath));
         String sheetName = "PolicyNumber&Premium";
         Workbook workbook = WorkbookFactory.create(file);

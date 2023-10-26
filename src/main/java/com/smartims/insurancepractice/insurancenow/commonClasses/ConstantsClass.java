@@ -144,7 +144,7 @@ public class ConstantsClass {
     //    Changes
     public static final String newBusinessUnInsuredMotoristBodilyInjury = "Line.UMBILimit";
     public static final String newBusinessUnderInsuredMotoristBodilyInjury = "Line.UIMBLimit";
-    public static final String newBusinessNewQuoteCustomer = "QuoteCustomerClearingRef_3";
+    public static final String newBusinessNewQuoteCustomer = "QuoteCustomerClearingRef_1";
     public static final String newBusinessDriver1OccupationCategory = "PersonInfo.OccupationCategory";
     public static final String newBusinessDriver1Lastname = "NameInfo.Surname";
     public static final String sideBarAddDriverNavigateDriverParty = "Navigate_DriverParty";
@@ -174,7 +174,8 @@ public class ConstantsClass {
     public static final String endorsementAICode = "AI.InterestCd";
     public static final String newBusinessAICode = "AI.InterestCd";
     public static final String additionalInterestTypeCode = "AI.InterestTypeCd";
-    public static final String saveButton = "//*[@id=\"Save\"]/span";
+//    public static final String saveButton = "//*[@id=\"Save\"]/span";
+    public static final String saveButton = "Save";
     public static final String finishButton = "Closeout";
     public static final String aIDetailLookup = "AIDetail_Lookup";
     public static final String search = "Search";

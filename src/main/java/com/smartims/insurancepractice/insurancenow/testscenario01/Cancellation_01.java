@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.io.IOException;
 
-public class Cancellation_03 {
+public class Cancellation_01 {
     public void getcancellation(ChromeDriver driver) throws IOException, InterruptedException {
         Actions actions = new Actions(driver);
         WebElement policyTab = driver.findElement(By.xpath(ConstantsClass.policySearchTab));
