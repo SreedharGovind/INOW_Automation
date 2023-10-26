@@ -101,17 +101,18 @@ public class Endorsement_02 {
             driver.findElement(By.id(ConstantsClass.additionalInterestTypeCode))
                     .sendKeys(evo.getEndorsementAIInterestType(), Keys.ENTER);
             driver.findElement(By.id(ConstantsClass.privatePassengerAutoCheckbox)).click();
-            driver.findElement(By.id(ConstantsClass.newBusinessWizardUnderwriting)).click();
-            driver.findElement(By.id(ConstantsClass.saveButton)).click();
-            driver.findElement(By.id(ConstantsClass.finishButton)).click();
-            driver.findElement(By.xpath(ConstantsClass.completeEndorsementTransactionButton)).click();
-            Robot robot = new Robot();
-            Thread.sleep(20000);
-            robot.keyPress(KeyEvent.VK_CONTROL); // Press CTRL key
-            robot.keyPress(KeyEvent.VK_SHIFT); // press shift
-            robot.keyPress(KeyEvent.VK_TAB); // Press tab key
-            seleniumToExcel.premium(driver, "Endorsement Premium");
-
         }
+        driver.findElement(By.id(ConstantsClass.newBusinessWizardUnderwriting)).click();
+        driver.findElement(By.id(ConstantsClass.saveButton)).click();
+        driver.findElement(By.id(ConstantsClass.finishButton)).click();
+        driver.findElement(By.xpath(ConstantsClass.completeEndorsementTransactionButton)).click();
+        Robot robot = new Robot();
+        Thread.sleep(20000);
+        robot.keyPress(KeyEvent.VK_CONTROL); // Press CTRL key
+        robot.keyPress(KeyEvent.VK_SHIFT); // press shift
+        robot.keyPress(KeyEvent.VK_TAB); // Press tab key
+        seleniumToExcel.premium(driver, "Endorsement Premium");
+
     }
 }
+
