@@ -44,11 +44,17 @@ public class RewriteNew_02 {
         robot.keyPress(KeyEvent.VK_CONTROL); // Press CTRL key
         robot.keyPress(KeyEvent.VK_SHIFT); // press shift
         robot.keyPress(KeyEvent.VK_TAB); // Press tab key
+        robot.keyRelease(KeyEvent.VK_TAB);
+        robot.keyRelease(KeyEvent.VK_SHIFT);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
         Robot robot1 = new Robot();
         Thread.sleep(20000);
         robot1.keyPress(KeyEvent.VK_CONTROL); // Press CTRL key
         robot1.keyPress(KeyEvent.VK_SHIFT); // press shift
         robot1.keyPress(KeyEvent.VK_TAB); // Press tab key
+        robot.keyRelease(KeyEvent.VK_TAB);
+        robot.keyRelease(KeyEvent.VK_SHIFT);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
         seleniumToExcel.premium(driver, "RewriteNew Premium");
 
     }
