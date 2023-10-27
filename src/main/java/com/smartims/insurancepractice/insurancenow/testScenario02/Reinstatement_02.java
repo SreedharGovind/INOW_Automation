@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.Select;
 import java.io.IOException;
 
 public class Reinstatement_02 {
-    void reinstatement_02(ChromeDriver driver, Actions actions) throws IOException {
+    void reinstatement_02(ChromeDriver driver, Actions actions) throws IOException, InterruptedException {
         ReinstatementVO rvo = new ReinstatementVO();
         SeleniumToExcel_02 seleniumToExcel = new SeleniumToExcel_02();
         NewBusinessVO nvo = new NewBusinessVO();
@@ -34,6 +34,7 @@ public class Reinstatement_02 {
                 .sendKeys(rvo.getReinstatementAdditionalNoticeText());
         driver.findElement(By.xpath(ConstantsClass.startButton)).click();
         driver.findElement(By.xpath(ConstantsClass.processButton)).click();
+        Thread.sleep(3000);
         seleniumToExcel.premium(driver, "Reinstatement Premium");
 
     }

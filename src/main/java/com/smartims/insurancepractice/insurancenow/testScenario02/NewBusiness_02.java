@@ -368,6 +368,8 @@ public class NewBusiness_02 {
         Thread.sleep(30000);
         robot.keyPress(KeyEvent.VK_CONTROL); // Press CTRL key
         robot.keyPress(KeyEvent.VK_TAB); // Press Tab key
+        robot.keyRelease(KeyEvent.VK_TAB);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
         seleniumToExcel.premium(driver, "NewBusinessPolicyNumber");
         seleniumToExcel.premium(driver, "NewBusiness Premium");
 

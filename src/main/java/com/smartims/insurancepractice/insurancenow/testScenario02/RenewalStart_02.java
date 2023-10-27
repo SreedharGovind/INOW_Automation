@@ -14,7 +14,6 @@ import java.io.IOException;
 public class RenewalStart_02 {
     void renewalStart_02(ChromeDriver driver, Actions actions) throws IOException {
         RenewalStartVO rsvo = new RenewalStartVO();
-        SeleniumToExcel_02 seleniumToExcel = new SeleniumToExcel_02();
         NewBusinessVO nvo = new NewBusinessVO();
         rsvo.setRenewalStartAdditionalDeclarationText(ExcelUtils_02.getCellValueByLabel("renewalStartAdditionalDeclarationText"));
         nvo.setNewBusinessPolicyNumber(ExcelUtils_PolicyNumber.getCellValueByLabel("NewBusinessPolicyNumber"));
@@ -33,6 +32,5 @@ public class RenewalStart_02 {
         driver.findElement(By.id(ConstantsClass.renewalStart)).click();
         driver.findElement(By.id(ConstantsClass.renewalStartFinesh)).click();
         driver.findElement(By.id(ConstantsClass.renewalStartProcess)).click();
-        seleniumToExcel.premium(driver, "RenewalStartPremium");
     }
 }
