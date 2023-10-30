@@ -44,6 +44,9 @@ public class RewriteNew_01 {
         robot1.keyPress(KeyEvent.VK_CONTROL); // Press CTRL key
         robot1.keyPress(KeyEvent.VK_SHIFT); //press shift
         robot1.keyPress(KeyEvent.VK_TAB); // Press tab key
+        robot1.keyRelease(KeyEvent.VK_CONTROL); // Press CTRL key
+        robot1.keyRelease(KeyEvent.VK_SHIFT); //press shift
+        robot1.keyRelease(KeyEvent.VK_TAB); // Press tab key
         se.premium(driver, "RewriteNewPremium");
     }
 }
