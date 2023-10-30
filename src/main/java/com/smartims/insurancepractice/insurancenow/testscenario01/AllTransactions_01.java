@@ -1,8 +1,9 @@
 package com.smartims.insurancepractice.insurancenow.testscenario01;
 
 
+import com.smartims.insurancepractice.insurancenow.commonClasses.CommonClass;
 import org.openqa.selenium.chrome.ChromeDriver;
-import com.smartims.insurancepractice.insurancenow.commonClasses.*;
+
 
 public class AllTransactions_01 {
     public static void main(String[] args) throws Exception {

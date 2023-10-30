@@ -41,53 +41,6 @@ public class EndorsementVO {
     String endorsementSSN2Joint;
     String endorsementBypassAddressVerification2Joint;
     String endorsementProceedwithoutVerification;
-    String endorsementMailingAddressChange;
-   String endorsementChangeContantDetails;
-   String AutomobilePolicyGeneralLimits;
-
- public String getAutomobilePolicyGeneralLimits() {
-  return AutomobilePolicyGeneralLimits;
- }
-
- public void setAutomobilePolicyGeneralLimits(String automobilePolicyGeneralLimits) {
-  AutomobilePolicyGeneralLimits = automobilePolicyGeneralLimits;
- }
-
- public String getEndorsementChangeContantDetails() {
-        return endorsementChangeContantDetails;
-    }
-
-    public void setEndorsementChangeContantDetails(String endorsementChangeContantDetails) {
-        this.endorsementChangeContantDetails = endorsementChangeContantDetails;
-    }
-
-    String endorsementPrimaryPhoneName;
-    String endorsementPrimaryPhoneNumber;
-
-    public String getEndorsementPrimaryPhoneName() {
-        return endorsementPrimaryPhoneName;
-    }
-
-    public void setEndorsementPrimaryPhoneName(String endorsementPrimaryPhoneName) {
-        this.endorsementPrimaryPhoneName = endorsementPrimaryPhoneName;
-    }
-
-    public String getEndorsementPrimaryPhoneNumber() {
-        return endorsementPrimaryPhoneNumber;
-    }
-
-    public void setEndorsementPrimaryPhoneNumber(String endorsementPrimaryPhoneNumber) {
-        this.endorsementPrimaryPhoneNumber = endorsementPrimaryPhoneNumber;
-    }
-
-    public String getEndorsementMailingAddressChange() {
-        return endorsementMailingAddressChange;
-    }
-
-    public void setEndorsementMailingAddressChange(String endorsementMailingAddressChange) {
-        this.endorsementMailingAddressChange = endorsementMailingAddressChange;
-    }
-
     String endorsementMailingAddress;
     String endorsementMailingAddressCity;
     String endorsementMailingAddressState;
