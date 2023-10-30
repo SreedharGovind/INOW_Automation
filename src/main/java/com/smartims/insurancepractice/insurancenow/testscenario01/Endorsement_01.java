@@ -17,6 +17,22 @@ public class Endorsement_01 {
         SeleniumToExcel_01 se = new SeleniumToExcel_01();
         evo.setEndorsementTransactionCd(ExcelUtils_01.getCellValueByLabel("endorsementTransactionCd"));
         evo.setEndorsementEffectiveDate(ExcelUtils_01.getCellValueByLabel("endorsementEffectiveDate"));
+        evo.setEndorsementMailingAddressChange(ExcelUtils_01.getCellValueByLabel("endorsementMailingAddressChange"));
+        evo.setEndorsementMailingAddress(ExcelUtils_01.getCellValueByLabel("endorsementMailingAddress"));
+        evo.setEndorsementMailingAddressCity(ExcelUtils_01.getCellValueByLabel("endorsementMailingAddressCity"));
+        evo.setEndorsementMailingAddressState(ExcelUtils_01.getCellValueByLabel("endorsementMailingAddressState"));
+        evo.setEndorsementMailingAddressZip(ExcelUtils_01.getCellValueByLabel("endorsementMailingAddressZip"));
+
+        evo.setEndorsementChangeContantDetails(ExcelUtils_01.getCellValueByLabel("endorsementChangeContantDetails"));
+        evo.setEndorsementPrimaryPhoneName(ExcelUtils_01.getCellValueByLabel("endorsementPrimaryPhoneName"));
+        evo.setEndorsementPrimaryPhoneNumber(ExcelUtils_01.getCellValueByLabel("endorsementPrimaryPhoneNumber"));
+        evo.setEndorsementEmail(ExcelUtils_01.getCellValueByLabel("endorsementEmail"));
+        evo.setEndorsementBestWaytoContact(ExcelUtils_01.getCellValueByLabel("endorsementBestWaytoContact"));
+        evo.setEndorsementBestTimetoContact(ExcelUtils_01.getCellValueByLabel("endorsementBestTimetoContact"));
+        evo.setAutomobilePolicyGeneralLimits(ExcelUtils_01.getCellValueByLabel("AutomobilePolicyGeneralLimits"));
+        evo.setEndorsementBodilyInjuryPerPersonPerAccident(ExcelUtils_01.getCellValueByLabel("endorsementBodilyInjuryPerPersonPerAccident"));
+        evo.setEndorsementPropertyDamage(ExcelUtils_01.getCellValueByLabel("endorsementPropertyDamage"));
+        evo.setEndorsementMedicalPayments(ExcelUtils_01.getCellValueByLabel("endorsementMedicalPayments"));
         evo.setEndorsementDriver1FirstName(ExcelUtils_01.getCellValueByLabel("endorsementDriver1FirstName"));
         evo.setEndorsementDriver1LastName(ExcelUtils_01.getCellValueByLabel("endorsementDriver1LastName"));
         evo.setEndorsementDriver1RelationshipToInsured(ExcelUtils_01.getCellValueByLabel("endorsementDriver1RelationshipToInsured"));
@@ -47,6 +63,49 @@ public class Endorsement_01 {
         driver.findElement(By.id(ConstantsClass.endorsementTransactionEffectiveDt)).sendKeys(evo.getEndorsementEffectiveDate());
         driver.findElement(By.id(ConstantsClass.endorsementStart)).click();
         driver.findElement(By.id(ConstantsClass.endorsementStart)).click();
+
+//        Changing the Address
+        String endorsementMailingAddressChange
+                = evo.getEndorsementMailingAddressChange();
+        if (endorsementMailingAddressChange
+                .equals("ChangeAddress")) {
+            driver.findElement(By.id("InsuredMailingAddr.Addr1")).clear();
+            driver.findElement(By.id("InsuredMailingAddr.City")).clear();
+            driver.findElement(By.id("InsuredMailingAddr.PostalCode")).clear();
+            driver.findElement(By.id("InsuredMailingAddr.Addr1")).sendKeys(evo.getEndorsementMailingAddress());
+            driver.findElement(By.id("InsuredMailingAddr.City")).sendKeys(evo.getEndorsementMailingAddressCity());
+            driver.findElement(By.id("InsuredMailingAddr.StateProvCd")).sendKeys(evo.getEndorsementMailingAddressState());
+            driver.findElement(By.id("InsuredMailingAddr.PostalCode")).sendKeys(evo.getEndorsementMailingAddressZip());
+            driver.findElement(By.id("CopyAddress")).click();
+        } else if (endorsementMailingAddressChange
+                .equals("SameAddress")) {
+            System.out.println("Same Address");
+        }
+//        Changing Contant details
+        String endorsementChangeContantDetails
+                = evo.getEndorsementChangeContantDetails();
+        if (endorsementChangeContantDetails.equals("ChangeContact")) {
+            driver.findElement(By.id("InsuredPhonePrimary.PhoneName")).sendKeys(evo.getEndorsementPrimaryPhoneName());
+            driver.findElement(By.id("InsuredPhonePrimary.PhoneNumber")).clear();
+            driver.findElement(By.id("InsuredPhonePrimary.PhoneNumber")).sendKeys(evo.getEndorsementPrimaryPhoneNumber());
+            driver.findElement(By.id("InsuredEmail.EmailAddr")).clear();
+            driver.findElement(By.id("InsuredEmail.EmailAddr")).sendKeys(evo.getEndorsementEmail());
+            driver.findElement(By.id("InsuredPersonal.BestWayToContact")).sendKeys(evo.getEndorsementBestWaytoContact());
+            driver.findElement(By.id("InsuredPersonal.BestTimeToContact")).sendKeys(evo.getEndorsementBestTimetoContact());
+        } else if (endorsementChangeContantDetails.equals("SameDetails")) {
+            System.out.println("SameDetails");
+        }
+        //Changing Limits
+        String AutomobilePolicyGeneralLimits= evo.getAutomobilePolicyGeneralLimits();
+
+        if(AutomobilePolicyGeneralLimits.equals("Change")) {
+            driver.findElement(By.id("Wizard_AutoGeneral")).click();
+            driver.findElement(By.id("Line.BILimit")).sendKeys(evo.getEndorsementBodilyInjuryPerPersonPerAccident());
+            driver.findElement(By.id("Line.PDLimit")).sendKeys(evo.getEndorsementPropertyDamage());
+            driver.findElement(By.id("Line.MedPayLimit")).sendKeys(evo.getEndorsementMedicalPayments());
+        }else if(AutomobilePolicyGeneralLimits.equals("NoChange")){
+            System.out.println("NoChange");
+        }
 //       Adding Driver2 To the policy
         driver.findElement(By.id(ConstantsClass.endorsementNavigate_DriverParty)).click();
         driver.findElement(By.id(ConstantsClass.endorsementDriver1FirstName)).sendKeys(evo.getEndorsementDriver1FirstName());
@@ -83,6 +142,9 @@ public class Endorsement_01 {
         robot.keyPress(KeyEvent.VK_CONTROL); // Press CTRL key
         robot.keyPress(KeyEvent.VK_SHIFT); //press shift
         robot.keyPress(KeyEvent.VK_TAB); // Press tab key
+        robot.keyRelease(KeyEvent.VK_CONTROL); // Press CTRL key
+        robot.keyRelease(KeyEvent.VK_SHIFT); //press shift
+        robot.keyRelease(KeyEvent.VK_TAB); // Press tab key
         se.premium(driver, "EndorsementPremium");
     }
 }

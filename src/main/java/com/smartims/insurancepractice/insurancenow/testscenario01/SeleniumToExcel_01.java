@@ -47,7 +47,7 @@ public class SeleniumToExcel_01 {
                 if (cell != null && cell.getCellType() == CellType.STRING
                         && cell.getStringCellValue().equals(transaction)) {
                     int columnIndex = cell.getColumnIndex();
-                    Cell dataCell = row.createCell(columnIndex + 2);
+                    Cell dataCell = row.createCell(columnIndex + 4);
                     dataCell.setCellValue(capturedData);
                     System.out.println(capturedData);
                     break;
