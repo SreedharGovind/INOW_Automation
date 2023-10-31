@@ -40,7 +40,7 @@ public class AllTransactions_02 {
         // Ensure the counter.properties file exists or create it if it doesn't
         Properties properties = new Properties();
 
-        try (InputStream inputStream = new FileInputStream("counter.properties")) {
+        try (InputStream inputStream = new FileInputStream("counter.properties2")) {
             properties.load(inputStream);
         } catch (IOException e) {
             e.printStackTrace();
@@ -55,7 +55,7 @@ public class AllTransactions_02 {
         // Update the properties with the new counter value
         properties.setProperty("counter", String.valueOf(currentCounterValue));
 
-        try (OutputStream outputStream = new FileOutputStream("counter.properties")) {
+        try (OutputStream outputStream = new FileOutputStream("counter.properties2")) {
             properties.store(outputStream, null);
         } catch (IOException e) {
             e.printStackTrace();
