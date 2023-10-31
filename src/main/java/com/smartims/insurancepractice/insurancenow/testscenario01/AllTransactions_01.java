@@ -4,6 +4,9 @@ package com.smartims.insurancepractice.insurancenow.testscenario01;
 import com.smartims.insurancepractice.insurancenow.commonClasses.CommonClass;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.io.*;
+import java.util.Properties;
+
 
 public class AllTransactions_01 {
     public static void main(String[] args) throws Exception {
@@ -23,5 +26,32 @@ public class AllTransactions_01 {
 
         RenewalStart_01 rs = new RenewalStart_01();
         rs.getRenewalStart(driver);
+
+        SeleniumToExcel_01.incrementCounterAfterAllTransactions();
+    }
+    private static void incrementCounter() {
+        // Ensure the counter.properties file exists or create it if it doesn't
+        Properties properties = new Properties();
+
+        try (InputStream inputStream = new FileInputStream("counter.properties")) {
+            properties.load(inputStream);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Get the current counter value, or use 1 if it doesn't exist
+        int currentCounterValue = Integer.parseInt(properties.getProperty("counter", "1"));
+
+        // Increment the counter
+        currentCounterValue++;
+
+        // Update the properties with the new counter value
+        properties.setProperty("counter", String.valueOf(currentCounterValue));
+
+        try (OutputStream outputStream = new FileOutputStream("counter.properties")) {
+            properties.store(outputStream, null);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

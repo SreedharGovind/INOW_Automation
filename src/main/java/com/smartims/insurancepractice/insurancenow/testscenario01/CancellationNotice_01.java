@@ -1,6 +1,7 @@
 package com.smartims.insurancepractice.insurancenow.testscenario01;
 
 import com.smartims.insurancepractice.insurancenow.commonClasses.ConstantsClass;
+import com.smartims.insurancepractice.insurancenow.testScenario02.SeleniumToExcel_02;
 import com.smartims.insurancepractice.insurancenow.voClasses.CancellationNoticeVO;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -15,6 +16,7 @@ import java.time.Duration;
 public class CancellationNotice_01 {
     public void getcancellationNotice(ChromeDriver driver) throws IOException, InterruptedException {
         Actions actions = new Actions(driver);
+        SeleniumToExcel_01 se = new SeleniumToExcel_01();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         CancellationNoticeVO cno = new CancellationNoticeVO();
         cno.setCancellationNoticeNoticeDate(ExcelUtils_01.getCellValueByLabel("cancellationNoticeNoticeDate"));
@@ -48,6 +50,7 @@ public class CancellationNotice_01 {
         driver.findElement(By.id("TransactionLongDescription")).sendKeys("Text");
         driver.findElement(By.id("Start")).click();
         driver.findElement(By.id("Process")).click();
+        se.premium(driver, "Cancellation Premium");
     }
 }
 
