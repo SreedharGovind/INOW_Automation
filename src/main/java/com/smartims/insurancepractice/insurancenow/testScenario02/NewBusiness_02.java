@@ -372,6 +372,5 @@ public class NewBusiness_02 {
         robot.keyRelease(KeyEvent.VK_CONTROL); // Press CTRL key
         seleniumToExcel.premium(driver, "NewBusinessPolicyNumber");
         seleniumToExcel.premium(driver, "NewBusiness Premium");
-
     }
 }

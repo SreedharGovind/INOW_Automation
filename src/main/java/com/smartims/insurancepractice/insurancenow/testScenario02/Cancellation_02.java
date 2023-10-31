@@ -4,7 +4,6 @@ import com.smartims.insurancepractice.insurancenow.commonClasses.ConstantsClass;
 import com.smartims.insurancepractice.insurancenow.voClasses.CancellationVO;
 import com.smartims.insurancepractice.insurancenow.voClasses.NewBusinessVO;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
