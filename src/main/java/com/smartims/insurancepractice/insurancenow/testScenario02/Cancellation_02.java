@@ -26,16 +26,9 @@ public class Cancellation_02 {
         cancelVO.setCancellationAdditionalNoticeText(
                 ExcelUtils_02.getCellValueByLabel("cancellationAdditionalNoticeText"));
 
-        WebElement policyTab = driver.findElement(By.xpath(ConstantsClass.policySearchTab));
-        actions.moveToElement(policyTab).perform();
-        policyTab.click();
-        driver.findElement(By.xpath(ConstantsClass.policyNumberTextField)).sendKeys(nvo.getNewBusinessPolicyNumber());
-        WebElement searchButton = driver.findElement(By.xpath(ConstantsClass.searchButton));
-        actions.moveToElement(searchButton).perform();
-        searchButton.click();
         driver.findElement(By.xpath(ConstantsClass.startTransactionButton)).click();
         Select transaction = new Select(driver.findElement(By.xpath(ConstantsClass.startNewTransaction)));
-        transaction.selectByValue("Cancellation");
+        transaction.selectByVisibleText("Cancellation");
         driver.findElement(By.xpath(ConstantsClass.selectButton)).click();
         driver.findElement(By.xpath(ConstantsClass.cancellationNoticeDate))
                 .sendKeys(cancelVO.getCancellationNoticeDate());

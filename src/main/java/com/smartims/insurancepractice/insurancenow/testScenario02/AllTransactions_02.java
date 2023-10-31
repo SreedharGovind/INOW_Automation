@@ -1,7 +1,6 @@
 package com.smartims.insurancepractice.insurancenow.testScenario02;
 
 import com.smartims.insurancepractice.insurancenow.commonClasses.CommonClass;
-import com.smartims.insurancepractice.insurancenow.testscenario03.SeleniumToExcel_01;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
@@ -34,7 +33,7 @@ public class AllTransactions_02 {
         renewal.renewalStart_02(driver, actions);
 
         // Increment the counter after all transactions finish execution
-        SeleniumToExcel_01.incrementCounterAfterAllTransactions();
+        SeleniumToExcel_02.incrementCounterAfterAllTransactions();
     }
 
     private static void incrementCounter() {

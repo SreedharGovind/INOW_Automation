@@ -5,7 +5,6 @@ import com.smartims.insurancepractice.insurancenow.voClasses.EndorsementVO;
 import com.smartims.insurancepractice.insurancenow.voClasses.NewBusinessVO;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
@@ -39,13 +38,6 @@ public class Endorsement_02 {
         evo.setEndorsementAICode(ExcelUtils_02.getCellValueByLabel("endorsementAICode"));
         evo.setEndorsementAIInterestType(ExcelUtils_02.getCellValueByLabel("endorsementAIInterestType"));
 
-        WebElement policyTab = driver.findElement(By.xpath(ConstantsClass.policySearchTab));
-        actions.moveToElement(policyTab).perform();
-        policyTab.click();
-        driver.findElement(By.xpath(ConstantsClass.policyNumberTextField)).sendKeys(nvo.getNewBusinessPolicyNumber());
-        WebElement searchButton = driver.findElement(By.xpath(ConstantsClass.searchButton));
-        actions.moveToElement(searchButton).perform();
-        searchButton.click();
         driver.findElement(By.xpath(ConstantsClass.startTransactionButton)).click();
         Select transaction = new Select(driver.findElement(By.xpath(ConstantsClass.startNewTransaction)));
         transaction.selectByValue("Endorsement");
@@ -111,6 +103,9 @@ public class Endorsement_02 {
         robot.keyPress(KeyEvent.VK_CONTROL); // Press CTRL key
         robot.keyPress(KeyEvent.VK_SHIFT); // press shift
         robot.keyPress(KeyEvent.VK_TAB); // Press tab key
+        robot.keyRelease(KeyEvent.VK_TAB);
+        robot.keyRelease(KeyEvent.VK_SHIFT);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
         seleniumToExcel.premium(driver, "Endorsement Premium");
 
     }

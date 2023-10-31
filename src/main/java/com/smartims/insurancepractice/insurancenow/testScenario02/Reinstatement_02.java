@@ -19,13 +19,7 @@ public class Reinstatement_02 {
         nvo.setNewBusinessPolicyNumber(ExcelUtils_PolicyNumber.getCellValueByLabel("NewBusinessPolicyNumber"));
         rvo.setReinstatementAdditionalNoticeText(
                 ExcelUtils_02.getCellValueByLabel("reinstatementAdditionalNoticeText"));
-        WebElement policyTab = driver.findElement(By.xpath(ConstantsClass.policySearchTab));
-        actions.moveToElement(policyTab).perform();
-        policyTab.click();
-        driver.findElement(By.xpath(ConstantsClass.policyNumberTextField)).sendKeys(nvo.getNewBusinessPolicyNumber());
-        WebElement searchButton = driver.findElement(By.xpath(ConstantsClass.searchButton));
-        actions.moveToElement(searchButton).perform();
-        searchButton.click();
+
         driver.findElement(By.xpath(ConstantsClass.startTransactionButton)).click();
         Select transaction = new Select(driver.findElement(By.xpath(ConstantsClass.startNewTransaction)));
         transaction.selectByVisibleText("Reinstatement");

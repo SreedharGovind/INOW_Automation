@@ -20,13 +20,6 @@ public class RewriteNew_02 {
         NewBusinessVO nvo = new NewBusinessVO();
         nvo.setNewBusinessPolicyNumber(ExcelUtils_PolicyNumber.getCellValueByLabel("NewBusinessPolicyNumber"));
         rnvo.setRewriteNewPaymentType(ExcelUtils_02.getCellValueByLabel("rewriteNewPaymentType"));
-        WebElement policyTab = driver.findElement(By.xpath(ConstantsClass.policySearchTab));
-        actions.moveToElement(policyTab).perform();
-        policyTab.click();
-        driver.findElement(By.xpath(ConstantsClass.policyNumberTextField)).sendKeys(nvo.getNewBusinessPolicyNumber());
-        WebElement searchButton = driver.findElement(By.xpath(ConstantsClass.searchButton));
-        actions.moveToElement(searchButton).perform();
-        searchButton.click();
         driver.findElement(By.xpath(ConstantsClass.startTransactionButton)).click();
         Select transaction = new Select(driver.findElement(By.xpath(ConstantsClass.startNewTransaction)));
         transaction.selectByVisibleText("Rewrite-New");
@@ -44,11 +37,18 @@ public class RewriteNew_02 {
         robot.keyPress(KeyEvent.VK_CONTROL); // Press CTRL key
         robot.keyPress(KeyEvent.VK_SHIFT); // press shift
         robot.keyPress(KeyEvent.VK_TAB); // Press tab key
-        Robot robot1 = new Robot();
         Thread.sleep(20000);
-        robot1.keyPress(KeyEvent.VK_CONTROL); // Press CTRL key
-        robot1.keyPress(KeyEvent.VK_SHIFT); // press shift
-        robot1.keyPress(KeyEvent.VK_TAB); // Press tab key
+        robot.keyRelease(KeyEvent.VK_TAB);
+        robot.keyRelease(KeyEvent.VK_SHIFT);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
+
+        robot.keyPress(KeyEvent.VK_CONTROL); // Press CTRL key
+        robot.keyPress(KeyEvent.VK_SHIFT); // press shift
+        robot.keyPress(KeyEvent.VK_TAB); // Press tab key
+        Thread.sleep(20000);
+        robot.keyRelease(KeyEvent.VK_TAB);
+        robot.keyRelease(KeyEvent.VK_SHIFT);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
         seleniumToExcel.premium(driver, "RewriteNew Premium");
 
     }

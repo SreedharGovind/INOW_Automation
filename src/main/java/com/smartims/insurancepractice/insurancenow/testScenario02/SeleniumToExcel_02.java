@@ -78,6 +78,9 @@ public class SeleniumToExcel_02 {
         if (transaction == "RewriteNew Premium") {
             return driver.findElement(By.id("PolicySummary_PremWithTaxesFeesAmt"));
         }
+        if (transaction == "RenewalStart Premium") {
+            return driver.findElement(By.id("PolicySummary_PremWithTaxesFeesAmt"));
+        }
         return null;
     }
 
@@ -87,7 +90,7 @@ public class SeleniumToExcel_02 {
 
         FileInputStream fis = new FileInputStream(new File("INOW Automation Data Sheet.xlsx"));
         Workbook workbook = new XSSFWorkbook(fis);
-        String SheetName = "PremiumValues";
+        String SheetName = "PolicyNumber&Premium";
         Sheet sheet = workbook.getSheet(SheetName);
         WebElement data = this.premiumValue(driver, transaction);
         String capturedData = data.getText();
