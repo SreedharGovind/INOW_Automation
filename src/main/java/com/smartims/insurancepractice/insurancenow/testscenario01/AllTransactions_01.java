@@ -1,7 +1,6 @@
 package com.smartims.insurancepractice.insurancenow.testscenario01;
 
 
-import com.smartims.insurancepractice.insurancenow.testscenario03.SeleniumToExcel_01;
 import org.openqa.selenium.chrome.ChromeDriver;
 import com.smartims.insurancepractice.insurancenow.commonClasses.*;
 
