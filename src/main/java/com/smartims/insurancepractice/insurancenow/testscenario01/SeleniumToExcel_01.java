@@ -6,56 +6,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.io.*;
-import java.util.Properties;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class SeleniumToExcel_01 {
-    private static int currentColumnIndex;
-    private static final String counterFilePath = "counter.properties";
-
-    private static void incrementColumnIndex() {
-        currentColumnIndex++;
-        saveCounterToFile();
-    }
-
-    public static int getCurrentColumnIndex() {
-        return currentColumnIndex;
-    }
-
-    public static void setCurrentColumnIndex(int newIndex) {
-        currentColumnIndex = newIndex;
-        saveCounterToFile();
-    }
-
-    public static String getCounterFilePath() {
-        return counterFilePath;
-    }
-
-    private static void saveCounterToFile() {
-        Properties properties = new Properties();
-        properties.setProperty("currentColumnIndex", String.valueOf(currentColumnIndex));
-
-        try (OutputStream outputStream = new FileOutputStream(counterFilePath)) {
-            properties.store(outputStream, null);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void initializeCurrentColumnIndex() {
-        Properties properties = new Properties();
-
-        try (FileInputStream fileInputStream = new FileInputStream(counterFilePath)) {
-            properties.load(fileInputStream);
-            String currentIndexValue = properties.getProperty("currentColumnIndex");
-            if (currentIndexValue != null) {
-                currentColumnIndex = Integer.parseInt(currentIndexValue);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
+    static int currentColumnIndex = 0;
     WebElement premiumValue(ChromeDriver driver, String transaction) {
 
         if (transaction.equals("NewBusinessPremium")) {
@@ -90,7 +47,7 @@ public class SeleniumToExcel_01 {
                 if (cell != null && cell.getCellType() == CellType.STRING
                         && cell.getStringCellValue().equals(transaction)) {
                     int columnIndex = cell.getColumnIndex();
-                    Cell dataCell = row.createCell(columnIndex + 1);
+                    Cell dataCell = row.createCell(columnIndex + 2);
                     dataCell.setCellValue(capturedData);
                     System.out.println(capturedData);
                     break;
