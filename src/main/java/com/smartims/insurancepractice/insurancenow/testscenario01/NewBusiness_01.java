@@ -216,6 +216,8 @@ public class NewBusiness_01 {
         Thread.sleep(20000);
         robot.keyPress(KeyEvent.VK_CONTROL); // Press CTRL key
         robot.keyPress(KeyEvent.VK_TAB); // Press Tab key
+        robot.keyRelease(KeyEvent.VK_CONTROL); // Press CTRL key
+        robot.keyRelease(KeyEvent.VK_TAB); // Press Tab key
         se.premium(driver, "PolicyNumber");
         se.premium(driver, "NewBusinessPremium");
 
