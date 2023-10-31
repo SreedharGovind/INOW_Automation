@@ -11,7 +11,7 @@ import java.util.Properties;
 
 public class SeleniumToExcel_01 {
     private static int currentColumnIndex;
-    private static final String counterFilePath = "counter.properties";
+    private static final String counterFilePath = "counter.properties1";
 
     private static void incrementColumnIndex() {
         currentColumnIndex++;

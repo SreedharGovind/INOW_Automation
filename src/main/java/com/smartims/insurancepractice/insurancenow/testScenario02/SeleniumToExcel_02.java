@@ -13,7 +13,7 @@ public class SeleniumToExcel_02 {
 
 
     private static int currentColumnIndex;
-    private static final String counterFilePath = "counter.properties";
+    private static final String counterFilePath = "counter.properties2";
 
     private static void incrementColumnIndex() {
         currentColumnIndex++;
