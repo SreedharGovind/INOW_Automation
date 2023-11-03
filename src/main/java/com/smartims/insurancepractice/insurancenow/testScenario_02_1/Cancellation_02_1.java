@@ -1,4 +1,4 @@
-package com.smartims.insurancepractice.insurancenow.testScenario02;
+package com.smartims.insurancepractice.insurancenow.testScenario_02_1;
 
 import com.smartims.insurancepractice.insurancenow.commonClasses.ConstantsClass;
 import com.smartims.insurancepractice.insurancenow.voClasses.CancellationVO;
@@ -10,20 +10,20 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.io.IOException;
 
-public class Cancellation_02 {
+public class Cancellation_02_1 {
     void cancellation_02(ChromeDriver driver, Actions actions) throws IOException {
         CancellationVO cancelVO = new CancellationVO();
-        SeleniumToExcel_02 seleniumToExcel = new SeleniumToExcel_02();
+        SeleniumToExcel_02_1 seleniumToExcel = new SeleniumToExcel_02_1();
         NewBusinessVO nvo = new NewBusinessVO();
 //nvo.setNewBusinessPolicyNumber(ExcelUtils_PolicyNumber.getCellValueByLabel("NewBusinessPolicyNumber"));
 
-        cancelVO.setCancellationNoticeDate(ExcelUtils_02.getCellValueByLabel("cancellationNoticeDate"));
-        cancelVO.setCancellationCancellationType(ExcelUtils_02.getCellValueByLabel("cancellationCancellationType"));
-        cancelVO.setCancellationReason(ExcelUtils_02.getCellValueByLabel("cancellationReason"));
-        cancelVO.setCancellationEffectiveDate(ExcelUtils_02.getCellValueByLabel("cancellationEffectiveDate"));
-        cancelVO.setCancellationType(ExcelUtils_02.getCellValueByLabel("cancellationType"));
+        cancelVO.setCancellationNoticeDate(ExcelUtils_02_1.getCellValueByLabel("cancellationNoticeDate"));
+        cancelVO.setCancellationCancellationType(ExcelUtils_02_1.getCellValueByLabel("cancellationCancellationType"));
+        cancelVO.setCancellationReason(ExcelUtils_02_1.getCellValueByLabel("cancellationReason"));
+        cancelVO.setCancellationEffectiveDate(ExcelUtils_02_1.getCellValueByLabel("cancellationEffectiveDate"));
+        cancelVO.setCancellationType(ExcelUtils_02_1.getCellValueByLabel("cancellationType"));
         cancelVO.setCancellationAdditionalNoticeText(
-                ExcelUtils_02.getCellValueByLabel("cancellationAdditionalNoticeText"));
+                ExcelUtils_02_1.getCellValueByLabel("cancellationAdditionalNoticeText"));
 
         driver.findElement(By.xpath(ConstantsClass.startTransactionButton)).click();
         Select transaction = new Select(driver.findElement(By.xpath(ConstantsClass.startNewTransaction)));

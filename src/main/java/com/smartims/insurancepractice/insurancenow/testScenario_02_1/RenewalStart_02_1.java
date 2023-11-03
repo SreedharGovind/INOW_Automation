@@ -1,4 +1,4 @@
-package com.smartims.insurancepractice.insurancenow.testScenario02;
+package com.smartims.insurancepractice.insurancenow.testScenario_02_1;
 
 import com.smartims.insurancepractice.insurancenow.commonClasses.ConstantsClass;
 import com.smartims.insurancepractice.insurancenow.voClasses.NewBusinessVO;
@@ -10,13 +10,13 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.io.IOException;
 
-public class RenewalStart_02 {
+public class RenewalStart_02_1 {
     void renewalStart_02(ChromeDriver driver, Actions actions) throws IOException {
         RenewalStartVO rsvo = new RenewalStartVO();
-        SeleniumToExcel_02 seleniumToExcel = new SeleniumToExcel_02();
+        SeleniumToExcel_02_1 seleniumToExcel = new SeleniumToExcel_02_1();
         NewBusinessVO nvo = new NewBusinessVO();
-        rsvo.setRenewalStartAdditionalDeclarationText(ExcelUtils_02.getCellValueByLabel("renewalStartAdditionalDeclarationText"));
-        /// nvo.setNewBusinessPolicyNumber(ExcelUtils_PolicyNumber.getCellValueByLabel("NewBusinessPolicyNumber"));
+        rsvo.setRenewalStartAdditionalDeclarationText(ExcelUtils_02_1.getCellValueByLabel("renewalStartAdditionalDeclarationText"));
+       /// nvo.setNewBusinessPolicyNumber(ExcelUtils_PolicyNumber.getCellValueByLabel("NewBusinessPolicyNumber"));
         driver.findElement(By.xpath(ConstantsClass.startTransactionButton)).click();
         Select transaction = new Select(driver.findElement(By.xpath(ConstantsClass.startNewTransaction)));
         transaction.selectByVisibleText("Renewal Start");

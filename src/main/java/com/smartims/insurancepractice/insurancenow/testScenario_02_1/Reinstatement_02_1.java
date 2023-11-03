@@ -1,4 +1,4 @@
-package com.smartims.insurancepractice.insurancenow.testScenario02;
+package com.smartims.insurancepractice.insurancenow.testScenario_02_1;
 
 import com.smartims.insurancepractice.insurancenow.commonClasses.ConstantsClass;
 import com.smartims.insurancepractice.insurancenow.voClasses.NewBusinessVO;
@@ -10,14 +10,15 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.io.IOException;
 
-public class Reinstatement_02 {
+public class Reinstatement_02_1 {
     void reinstatement_02(ChromeDriver driver, Actions actions) throws IOException {
         ReinstatementVO rvo = new ReinstatementVO();
-        SeleniumToExcel_02 seleniumToExcel = new SeleniumToExcel_02();
+        SeleniumToExcel_02_1 seleniumToExcel = new SeleniumToExcel_02_1();
         NewBusinessVO nvo = new NewBusinessVO();
 //        nvo.setNewBusinessPolicyNumber(ExcelUtils_PolicyNumber.getCellValueByLabel("NewBusinessPolicyNumber"));
         rvo.setReinstatementAdditionalNoticeText(
-                ExcelUtils_02.getCellValueByLabel("reinstatementAdditionalNoticeText"));
+                ExcelUtils_02_1.getCellValueByLabel("reinstatementAdditionalNoticeText"));
+
         driver.findElement(By.xpath(ConstantsClass.startTransactionButton)).click();
         Select transaction = new Select(driver.findElement(By.xpath(ConstantsClass.startNewTransaction)));
         transaction.selectByVisibleText("Reinstatement");

@@ -15,11 +15,10 @@ import java.io.IOException;
 
 public class Endorsement_02 {
     void endorsement_02(ChromeDriver driver, Actions actions) throws IOException, InterruptedException, AWTException {
-
         SeleniumToExcel_02 seleniumToExcel = new SeleniumToExcel_02();
         NewBusinessVO nvo = new NewBusinessVO();
         EndorsementVO evo = new EndorsementVO();
-        nvo.setNewBusinessPolicyNumber(ExcelUtils_PolicyNumber.getCellValueByLabel("NewBusinessPolicyNumber"));
+//nvo.setNewBusinessPolicyNumber(ExcelUtils_PolicyNumber.getCellValueByLabel("NewBusinessPolicyNumber"));
         evo.setEndorsementEffectiveDate(ExcelUtils_02.getCellValueByLabel("endorsementEffectiveDate"));
         evo.setEndorsementEntityType(ExcelUtils_02.getCellValueByLabel("endorsementEntityType"));
         evo.setEndorsementIndividualSuffix(ExcelUtils_02.getCellValueByLabel("endorsementIndividualSuffix"));
@@ -106,7 +105,7 @@ public class Endorsement_02 {
         robot.keyRelease(KeyEvent.VK_TAB);
         robot.keyRelease(KeyEvent.VK_SHIFT);
         robot.keyRelease(KeyEvent.VK_CONTROL);
-        seleniumToExcel.premium(driver, "Endorsement Premium");
+        seleniumToExcel.premium(driver, "Endorsement Premium_TS02");
 
     }
 }

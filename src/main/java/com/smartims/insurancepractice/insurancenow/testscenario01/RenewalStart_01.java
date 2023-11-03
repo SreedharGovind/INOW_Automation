@@ -23,7 +23,7 @@ public class RenewalStart_01 {
         driver.findElement(By.id(ConstantsClass.renewalStart)).click();
         driver.findElement(By.id(ConstantsClass.renewalStartFinesh)).click();
         driver.findElement(By.id(ConstantsClass.renewalStartProcess)).click();
-        se.premium(driver, "RenewalStartPremium");
+        se.premium(driver, "RenewalStart Premium_TS01");
 
     }
 }

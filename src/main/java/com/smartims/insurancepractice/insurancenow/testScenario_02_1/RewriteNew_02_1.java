@@ -1,4 +1,4 @@
-package com.smartims.insurancepractice.insurancenow.testScenario02;
+package com.smartims.insurancepractice.insurancenow.testScenario_02_1;
 
 import com.smartims.insurancepractice.insurancenow.commonClasses.ConstantsClass;
 import com.smartims.insurancepractice.insurancenow.voClasses.NewBusinessVO;
@@ -12,13 +12,13 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 
-public class RewriteNew_02 {
+public class RewriteNew_02_1 {
     void rewriteNew_02(ChromeDriver driver, Actions actions) throws IOException, InterruptedException, AWTException {
         RewriteNewVO rnvo = new RewriteNewVO();
-        SeleniumToExcel_02 seleniumToExcel = new SeleniumToExcel_02();
+        SeleniumToExcel_02_1 seleniumToExcel = new SeleniumToExcel_02_1();
         NewBusinessVO nvo = new NewBusinessVO();
-        // nvo.setNewBusinessPolicyNumber(ExcelUtils_PolicyNumber.getCellValueByLabel("NewBusinessPolicyNumber"));
-        rnvo.setRewriteNewPaymentType(ExcelUtils_02.getCellValueByLabel("rewriteNewPaymentType"));
+       // nvo.setNewBusinessPolicyNumber(ExcelUtils_PolicyNumber.getCellValueByLabel("NewBusinessPolicyNumber"));
+        rnvo.setRewriteNewPaymentType(ExcelUtils_02_1.getCellValueByLabel("rewriteNewPaymentType"));
         driver.findElement(By.xpath(ConstantsClass.startTransactionButton)).click();
         Select transaction = new Select(driver.findElement(By.xpath(ConstantsClass.startNewTransaction)));
         transaction.selectByVisibleText("Rewrite-New");

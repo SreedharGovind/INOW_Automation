@@ -1,4 +1,4 @@
-package com.smartims.insurancepractice.insurancenow.testScenario02;
+package com.smartims.insurancepractice.insurancenow.testScenario_02_1;
 
 import com.smartims.insurancepractice.insurancenow.commonClasses.CommonClass;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,33 +8,33 @@ import java.awt.*;
 import java.io.*;
 import java.util.Properties;
 
-public class AllTransactions_02 {
+public class AllTransactions_02_1 {
 //    public static void main(String[] args) throws InterruptedException, IOException, AWTException {
      public void allTransactions_02() throws IOException, InterruptedException, AWTException {
         ChromeDriver driver = CommonClass.getchromedriver();
         Actions actions = new Actions(driver);
 
         // Create new Account
-        NewBusiness_02 newBusiness = new NewBusiness_02();
+        NewBusiness_02_1 newBusiness = new NewBusiness_02_1();
         newBusiness.newBusiness_02(driver, actions);
 
-        Endorsement_02 endorsement = new Endorsement_02();
+        Endorsement_02_1 endorsement = new Endorsement_02_1();
         endorsement.endorsement_02(driver, actions);
 
-        Cancellation_02 cancellation = new Cancellation_02();
+        Cancellation_02_1 cancellation = new Cancellation_02_1();
         cancellation.cancellation_02(driver, actions);
 
-        Reinstatement_02 reinstatement = new Reinstatement_02();
+        Reinstatement_02_1 reinstatement = new Reinstatement_02_1();
         reinstatement.reinstatement_02(driver, actions);
 
-        RewriteNew_02 rewrite = new RewriteNew_02();
+        RewriteNew_02_1 rewrite = new RewriteNew_02_1();
         rewrite.rewriteNew_02(driver, actions);
 
-        RenewalStart_02 renewal = new RenewalStart_02();
+        RenewalStart_02_1 renewal = new RenewalStart_02_1();
         renewal.renewalStart_02(driver, actions);
 
         // Increment the counter after all transactions finish execution
-        SeleniumToExcel_02.incrementCounterAfterAllTransactions();
+        SeleniumToExcel_02_1.incrementCounterAfterAllTransactions();
     }
 
     private static void incrementCounter() {

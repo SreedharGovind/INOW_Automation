@@ -12,7 +12,7 @@ import java.util.Properties;
 public class SeleniumToExcel_01 {
 
     private static int currentColumnIndex;
-    private static final String counterFilePath = "counter.properties";
+    private static final String counterFilePath = "counter.properties1";
 
     private static void incrementColumnIndex() {
         currentColumnIndex++;
@@ -58,35 +58,33 @@ public class SeleniumToExcel_01 {
     }
 
     WebElement premiumValue(ChromeDriver driver, String transaction) {
-
-        if (transaction.equals("NewBusinessPremium")) {
-            return driver.findElement(By.xpath(
-                    "/html/body/main/form/div[1]/div/div[4]/div/div[3]/div[4]/div/div/div/table/tbody/tr[2]/td[7]"));
+        if (transaction == "NewBusinessPolicyNumber_TS01") {
+            return driver.findElement(By.id("PolicySummary_PolicyNumber"));
         }
-        if (transaction.equals("PolicyNumber")) {
-            return    driver.findElement(By.xpath("/html/body/main/form/div[1]/div/div[2]/section[1]/div[2]/div[3]/div/div/div/div[1]/div[2]"));
-        }
-        if (transaction.equals("EndorsementPremium")) {
-            return driver.findElement(By.xpath(
-                    "/html/body/main/form/div[1]/div/div[4]/div/div[3]/div[4]/div/div/div/table/tbody/tr[2]/td[7]"));
-        } if (transaction == "Cancellation Premium") {
+        if (transaction == "NewBusiness Premium_TS01") {
             return driver.findElement(By.id("PolicySummary_PremWithTaxesFeesAmt"));
         }
-        if (transaction.equals("RewriteNewPremium")) {
-            return driver.findElement(
-                    By.xpath("/html/body/main/form/div[1]/div/div[4]/div/div[3]/div[4]/div/div/div/table/tbody/tr[2]/td[7]"));
-        } if (transaction.equals("RenewalStartPremium")) {
-            return driver.findElement(
-                    By.xpath("/html/body/main/form/div[1]/div/div[4]/div/div[3]/div[4]/div/div/div/table/tbody/tr[2]/td[7]"));
+        if (transaction == "Endorsement Premium_TS01") {
+            return driver.findElement(By.id("PolicySummary_PremWithTaxesFeesAmt"));
+        }
+        if (transaction == "Cancellation Premium_TS01") {
+            return driver.findElement(By.id("PolicySummary_PremWithTaxesFeesAmt"));
+        }
+        if (transaction == "RewriteNew Premium_TS01") {
+            return driver.findElement(By.id("PolicySummary_PremWithTaxesFeesAmt"));
+        }
+        if (transaction == "RenewalStart Premium_TS01") {
+            return driver.findElement(By.id("PolicySummary_PremWithTaxesFeesAmt"));
         }
         return null;
     }
+
     public void premium(ChromeDriver driver, String transaction) throws IOException {
         initializeCurrentColumnIndex(); // Initialize the currentColumnIndex from the properties file
         System.out.println("currentColumnIndex at the beginning: " + currentColumnIndex);
         FileInputStream fis = new FileInputStream(new File("INOW Automation Data Sheet.xlsx"));
         Workbook workbook = new XSSFWorkbook(fis);
-        String SheetName="PremiumValues";
+        String SheetName = "PolicyNumber&Premium";
         Sheet sheet = workbook.getSheet(SheetName);
         WebElement data = this.premiumValue(driver, transaction);
         String capturedData = data.getText();
@@ -106,6 +104,7 @@ public class SeleniumToExcel_01 {
         workbook.write(fos);
         fos.close();
     }
+
     // Add this method to increment the counter after all transactions finish execution
     public static void incrementCounterAfterAllTransactions() {
         incrementColumnIndex();

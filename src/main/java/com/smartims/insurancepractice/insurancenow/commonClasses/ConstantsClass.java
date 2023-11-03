@@ -160,6 +160,11 @@ public class ConstantsClass {
     public static final String jointInsuredBirthdate = "InsuredPersonalJoint.BirthDt";
     public static final String wizardPayplansButton = "Wizard_Review";
 
+    public static final String driver_vehicleDeleteLink1 = "DeleteLink_1";
+    public static final String driver_vehicleDeleteLink2 = "DeleteLink_2";
+    public static final String driver_vehicleDeleteLink3 = "DeleteLink_3";
+    public static final String confirmDeleteButton = "//*[@id=\"Delete\"]/span";
+
     public static final String endorsementNonDriver1NonDriverType = "DriverInfo.DriverTypeCd";
     public static final String endorsementNonDriver1FirstName = "NameInfo.GivenName";
     public static final String endorsementNonDriver1LastName = "NameInfo.Surname";
@@ -174,7 +179,7 @@ public class ConstantsClass {
     public static final String endorsementAICode = "AI.InterestCd";
     public static final String newBusinessAICode = "AI.InterestCd";
     public static final String additionalInterestTypeCode = "AI.InterestTypeCd";
-//    public static final String saveButton = "//*[@id=\"Save\"]/span";
+    //    public static final String saveButton = "//*[@id=\"Save\"]/span";
     public static final String saveButton = "Save";
     public static final String finishButton = "Closeout";
     public static final String aIDetailLookup = "AIDetail_Lookup";
@@ -209,6 +214,13 @@ public class ConstantsClass {
     public static final String cancellationReason = "ReasonCd";
 
     public static final String cancellationReasonADD = "Add";
+    public static final String contextMenuHistoryActions = "ContextMenuHistoryActions_1_3";
+    public static final String noticeCancel = "NoticeCancel_1_3";
+    public static final String transactionLongDescription = "TransactionLongDescription";
+
+    public static final String start = "Start";
+    public static final String processStart = "Process";
+
     //    Exixting customer
     public static final String existingCustomer = "//*[@id=\"Menu_Policy\"]";
     public static final String existingCustomerPolicyProcessing = "Menu_Policy_PolicyProcessing";
@@ -220,7 +232,6 @@ public class ConstantsClass {
     public static final String existingCustomerControllingStateCd = "BasicPolicy.ControllingStateCd";
     public static final String existingCustomerEffectiveDt = "BasicPolicy.EffectiveDt";
     public static final String existingCustomerProgramType = "BasicPolicy.ProgramType";
-
 
 
     public static final String endorsementToolbarSearchText = "ToolbarSearchText";
@@ -263,13 +274,13 @@ public class ConstantsClass {
     public static final String resindCancellationToolbarSearchText = "ToolbarSearchText";
     public static final String resindCancellationToolbarSearch = "ToolbarSearch";
     public static final String resindCancellationTransaction = "//*[@id=\"Transaction\"]/span";
-    public static final String resindCancellationContextMenuHistoryActions="ContextMenuHistoryActions_1_3";
-    public static final String resindCancellationContextMenuHistoryActionsdropdown="ContextMenuHistoryActions_1_3_Add-dropdown";
-    public static final String resindCancellationRescind="Rescind_1_3";
-    public static final String resindCancellationTransactionLongDescription="TransactionLongDescription";
-    public static final String resindCancellationStart="Start";
-    public static final String resindCancellationProcess="Process";
-//
+    public static final String resindCancellationContextMenuHistoryActions = "ContextMenuHistoryActions_1_3";
+    public static final String resindCancellationContextMenuHistoryActionsdropdown = "ContextMenuHistoryActions_1_3_Add-dropdown";
+    public static final String resindCancellationRescind = "Rescind_1_3";
+    public static final String resindCancellationTransactionLongDescription = "TransactionLongDescription";
+    public static final String resindCancellationStart = "Start";
+    public static final String resindCancellationProcess = "Process";
+
 
     public static final String rewriteNewToolbarSearchText = "ToolbarSearchText";
     public static final String rewriteNewToolbarSearch = "ToolbarSearch";
@@ -278,26 +289,25 @@ public class ConstantsClass {
     public static final String rewriteNewSelect = "Select";
     public static final String rewriteNewTransactionEffectiveDt = "TransactionEffectiveDt";
     public static final String rewriteNewStart = "Start";
-    public static final String rewriteNewTransactionLongDescription="TransactionLongDescription";
-    public static final String rewriteNewCloseout="Closeout";
-    public static final String rewriteNewUnderwriting="Wizard_Underwriting";
-    public static final String rewriteNewSave="Save";
-    public static final String rewriteNewReview="Wizard_Review";
-    public static final String rewriteNewWizard_ReviewBasicPolicyPayPlanCd_1="BasicPolicy.PayPlanCd_1";
-    public static final String rewriteNewTransactionInfoPaymentTypeCd="TransactionInfo.PaymentTypeCd";
-    public static final String rewriteNewProcess="Process";
+    public static final String rewriteNewTransactionLongDescription = "TransactionLongDescription";
+    public static final String rewriteNewCloseout = "Closeout";
+    public static final String rewriteNewUnderwriting = "Wizard_Underwriting";
+    public static final String rewriteNewSave = "Save";
+    public static final String rewriteNewReview = "Wizard_Review";
+    public static final String rewriteNewWizard_ReviewBasicPolicyPayPlanCd_1 = "BasicPolicy.PayPlanCd_1";
+    public static final String rewriteNewTransactionInfoPaymentTypeCd = "TransactionInfo.PaymentTypeCd";
+    public static final String rewriteNewProcess = "Process";
 
 
-
-    public static final String renewalPolicyNumber="ToolbarSearchText";
-    public static final String renewalToolbarSearch="ToolbarSearch";
-    public static final String renewalTransaction="Transaction";
-    public static final String renewalStartTransaction="TransactionCd";
-    public static final String renewalStartSelect="Select";
-    public static final String renewalStartTransactionLongDescription="TransactionLongDescription";
-    public static final String renewalStart="Start";
-    public static final String renewalStartFinesh="Closeout";
-    public static final String renewalStartProcess="Process";
+    public static final String renewalPolicyNumber = "ToolbarSearchText";
+    public static final String renewalToolbarSearch = "ToolbarSearch";
+    public static final String renewalTransaction = "Transaction";
+    public static final String renewalStartTransaction = "TransactionCd";
+    public static final String renewalStartSelect = "Select";
+    public static final String renewalStartTransactionLongDescription = "TransactionLongDescription";
+    public static final String renewalStart = "Start";
+    public static final String renewalStartFinesh = "Closeout";
+    public static final String renewalStartProcess = "Process";
 
 }
 
