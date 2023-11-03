@@ -1,4 +1,4 @@
-package com.smartims.insurancepractice.insurancenow.testScenario02;
+package com.smartims.insurancepractice.insurancenow.testScenario_02_1;
 
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.io.*;
 import java.util.Properties;
 
-public class SeleniumToExcel_02 {
+public class SeleniumToExcel_02_1 {
 
 
     private static int currentColumnIndex;

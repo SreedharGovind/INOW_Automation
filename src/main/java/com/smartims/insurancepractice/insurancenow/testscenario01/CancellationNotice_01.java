@@ -28,29 +28,28 @@ public class CancellationNotice_01 {
         cno.setCancellationNoticeDescription(ExcelUtils_01.getCellValueByLabel("cancellationNoticeDescription"));
         driver.findElement(By.xpath(ConstantsClass.startTransactionButton)).click();
         Select transaction = new Select(driver.findElement(By.xpath(ConstantsClass.startNewTransaction)));
-        transaction.selectByValue("Cancellation Notice");
+        transaction.selectByValue(cno.getCancellationNoticeStartTransaction());
         driver.findElement(By.xpath(ConstantsClass.selectButton)).click();
         driver.findElement(By.xpath(ConstantsClass.cancellationNoticeDate)).sendKeys(cno.getCancellationNoticeNoticeDate(), Keys.TAB);
         driver.findElement(By.xpath(ConstantsClass.cancellationType)).click();
         Select cancellationType = new Select(driver.findElement(By.xpath(ConstantsClass.cancellationType)));
-        cancellationType.selectByValue("Company");
+        cancellationType.selectByValue(cno.getCancellationNoticeCancellationType());
         driver.findElement(By.id(ConstantsClass.cancellationReason)).click();
-        Select cancellationReason= new Select(driver.findElement(By.id(ConstantsClass.cancellationReason)));
-        cancellationReason.selectByValue("UnacceptableRisk");
+        Select cancellationReason = new Select(driver.findElement(By.id(ConstantsClass.cancellationReason)));
+        cancellationReason.selectByValue(cno.getCancellationNoticeReason());
         driver.findElement(By.id(ConstantsClass.cancellationReasonADD)).click();
         driver.findElement(By.xpath(ConstantsClass.additionalNoticeText)).sendKeys(cno.getCancellationNoticeAdditionalNoticeText(), Keys.TAB);
         driver.findElement(By.xpath(ConstantsClass.startButton)).click();
         driver.findElement(By.xpath(ConstantsClass.processButton)).click();
         Thread.sleep(2000);
-        driver.findElement(By.id("ContextMenuHistoryActions_1_3")).click();
-// driver.findElement(By.id("ContextMenuHistoryActions_1_3")).click();
-        WebElement select = driver.findElement(By.id("ContextMenuHistoryActions_1_3"));
+        driver.findElement(By.id(ConstantsClass.contextMenuHistoryActions)).click();
+        WebElement select = driver.findElement(By.id(ConstantsClass.contextMenuHistoryActions));
         actions.moveToElement(select).perform();
-        driver.findElement(By.id("NoticeCancel_1_3")).click();
-        driver.findElement(By.id("TransactionLongDescription")).sendKeys("Text");
-        driver.findElement(By.id("Start")).click();
-        driver.findElement(By.id("Process")).click();
-        se.premium(driver, "Cancellation Premium");
+        driver.findElement(By.id(ConstantsClass.noticeCancel)).click();
+        driver.findElement(By.id(ConstantsClass.transactionLongDescription)).sendKeys("Text");
+        driver.findElement(By.id(ConstantsClass.start)).click();
+        driver.findElement(By.id(ConstantsClass.processStart)).click();
+        se.premium(driver, "Cancellation Premium_TS01");
     }
 }
 

@@ -363,6 +363,60 @@ public class EndorsementVO {
     String endorsementUWQuestionsNo;
     String endorsementFinish;
     String endorsementPaymentType;
+    String driver1Delete;
+    String driver2Delete;
+    String driver3Delete;
+    String vehicle1Delete;
+    String vehicle2Delete;
+    String vehicle3Delete;
+
+    public String getDriver1Delete() {
+        return driver1Delete;
+    }
+
+    public void setDriver1Delete(String driver1Delete) {
+        this.driver1Delete = driver1Delete;
+    }
+
+    public String getDriver2Delete() {
+        return driver2Delete;
+    }
+
+    public void setDriver2Delete(String driver2Delete) {
+        this.driver2Delete = driver2Delete;
+    }
+
+    public String getDriver3Delete() {
+        return driver3Delete;
+    }
+
+    public void setDriver3Delete(String driver3Delete) {
+        this.driver3Delete = driver3Delete;
+    }
+
+    public String getVehicle1Delete() {
+        return vehicle1Delete;
+    }
+
+    public void setVehicle1Delete(String vehicle1Delete) {
+        this.vehicle1Delete = vehicle1Delete;
+    }
+
+    public String getVehicle2Delete() {
+        return vehicle2Delete;
+    }
+
+    public void setVehicle2Delete(String vehicle2Delete) {
+        this.vehicle2Delete = vehicle2Delete;
+    }
+
+    public String getVehicle3Delete() {
+        return vehicle3Delete;
+    }
+
+    public void setVehicle3Delete(String vehicle3Delete) {
+        this.vehicle3Delete = vehicle3Delete;
+    }
 
     public String getEndorsementEffectiveDate() {
         return endorsementEffectiveDate;

@@ -213,13 +213,13 @@ public class NewBusiness_01 {
 //        Issue the Bussiness
         driver.findElement(By.xpath(ConstantsClass.process)).click();
         Robot robot = new Robot();
-        Thread.sleep(20000);
+        Thread.sleep(30000);
         robot.keyPress(KeyEvent.VK_CONTROL); // Press CTRL key
-        robot.keyPress(KeyEvent.VK_TAB); // Press Tab key
+        robot.keyPress(KeyEvent.VK_TAB);
+        robot.keyRelease(KeyEvent.VK_TAB);// Press Tab key
         robot.keyRelease(KeyEvent.VK_CONTROL); // Press CTRL key
-        robot.keyRelease(KeyEvent.VK_TAB); // Press Tab key
-        se.premium(driver, "PolicyNumber");
-        se.premium(driver, "NewBusinessPremium");
+        se.premium(driver, "NewBusinessPolicyNumber_TS01");
+        se.premium(driver, "NewBusiness Premium_TS01");
 
     }
 }

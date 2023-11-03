@@ -86,7 +86,7 @@ public class Endorsement_01 {
         robot.keyRelease(KeyEvent.VK_CONTROL); // Press CTRL key
         robot.keyRelease(KeyEvent.VK_SHIFT); //press shift
         robot.keyRelease(KeyEvent.VK_TAB); // Press tab key
-        se.premium(driver, "EndorsementPremium");
+        se.premium(driver, "Endorsement Premium_TS01");
     }
 }
 
